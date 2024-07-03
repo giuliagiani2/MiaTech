@@ -1,3 +1,27 @@
+h1 {
+    color: red;
+}
+
+h2 {
+    color: orange;
+}
+
+h3 {
+    color: yellow;
+}
+
+h4 {
+    color: greenyellow;
+}
+
+h5 {
+    color: blue;
+}
+
+h6 {
+    color: purple;
+}
+
 p{
     color: blue;
     text-align: right;
