@@ -31,3 +31,15 @@ p{
 .test {
     font-size: 30px;
 }
+
+.verde {
+    color: green;
+}
+
+.verdeacqua {
+    background-color: aquamarine;
+}
+
+.centro {
+    text-align: center;
+}
