@@ -51,3 +51,7 @@ p{
 h2, h4, h6 {
     background-color: antiquewhite;
 }
+
+a:hover {
+    color: black;
+}
