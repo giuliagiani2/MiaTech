@@ -55,3 +55,7 @@ h2, h4, h6 {
 a:hover {
     color: black;
 }
+
+ul>li:last-child {
+    color: cornflowerblue;
+}
