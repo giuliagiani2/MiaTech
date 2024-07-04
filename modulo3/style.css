@@ -47,3 +47,7 @@ p{
 .centro {
     text-align: center;
 }
+
+h2, h4, h6 {
+    background-color: antiquewhite;
+}
