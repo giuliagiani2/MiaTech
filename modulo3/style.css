@@ -87,3 +87,7 @@ p {
 p.myclass-3 {
     color: rgba(255, 0, 0, 0.7);
 }
+
+p {
+    color: red;
+}
