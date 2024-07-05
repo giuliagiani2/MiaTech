@@ -27,7 +27,7 @@ h6 {
     color: purple;
 }
 
-p{
+p {
     color: blue;
     text-align: right;
 }
@@ -48,7 +48,9 @@ p{
     text-align: center;
 }
 
-h2, h4, h6 {
+h2,
+h4,
+h6 {
     background-color: antiquewhite;
 }
 
@@ -64,13 +66,14 @@ p {
     color: deeppink;
 }
 
-.myclass {
-color: orchid;
+.myclass-2 {
+    color: orchid;
 }
 
 #myid {
-color: turquoise;
+    color: turquoise;
 }
+
 /**/
 
 p {
@@ -79,4 +82,8 @@ p {
 
 p {
     color: #ff0000;
-    }
+}
+
+p.myclass-3 {
+    color: rgba(255, 0, 0, 0.7);
+}
