@@ -59,3 +59,15 @@ a:hover {
 ul>li:last-child {
     color: cornflowerblue;
 }
+
+p {
+    color: deeppink;
+}
+
+.myclass {
+color: orchid;
+}
+
+#myid {
+color: turquoise;
+}
