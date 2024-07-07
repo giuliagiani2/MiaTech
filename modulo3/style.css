@@ -74,7 +74,10 @@ p {
     color: turquoise;
 }
 
-/**/
+.myclass2 {
+    color: dodgerblue;
+    text-align: left;
+}
 
 p {
     color: rgb(255, 0, 0);
