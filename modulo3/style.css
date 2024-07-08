@@ -85,6 +85,13 @@ p {
     border: 10px dotted limegreen;
 }
 
+li {
+    padding: 55px;
+    margin: 30px;
+    border: 15px;
+    display: inline-block;
+}
+
 p {
     color: rgb(255, 0, 0);
 }
