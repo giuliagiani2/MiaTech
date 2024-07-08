@@ -79,6 +79,10 @@ p {
     text-align: left;
 }
 
+.myclass-4 {
+    padding: 50px;
+}
+
 p {
     color: rgb(255, 0, 0);
 }
