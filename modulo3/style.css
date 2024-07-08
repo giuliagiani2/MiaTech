@@ -82,6 +82,7 @@ p {
 .myclass-4 {
     padding: 50px;
     margin: 25px;
+    border: 10px dotted limegreen;
 }
 
 p {
