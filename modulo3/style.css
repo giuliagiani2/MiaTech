@@ -92,6 +92,30 @@ li {
     display: inline-block;
 }
 
+.span-1 {
+    border: 10px;
+    background-color: indianred;
+    height: 250px;
+    width: 300px; 
+    display: inline;
+}
+
+.span-2 {
+    border: 10px;
+    background-color: indianred;
+    height: 250px;
+    width: 300px; 
+    display: inline-block;
+}
+
+.span-3 {
+    border: 10px;
+    background-color: indianred;
+    height: 250px;
+    width: 300px; 
+    display: block;
+}
+
 p {
     color: rgb(255, 0, 0);
 }
