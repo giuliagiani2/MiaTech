@@ -116,6 +116,12 @@ li {
     display: block;
 }
 
+
+
+.hide {
+    display: none;
+}
+
 p {
     color: rgb(255, 0, 0);
 }
