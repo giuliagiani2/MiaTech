@@ -122,6 +122,24 @@ li {
     display: none;
 }
 
+.myclass-5 {
+    display: block;
+    float: left;
+    background-color: aliceblue;
+    padding: 20px;
+    margin: 20px;
+    width: 200px;
+}
+
+.img-right {
+    display: block;
+    float: right;
+    background-color: aliceblue;
+    padding: 20px;
+    margin: 20px;
+    width: 200px;
+}
+
 p {
     color: rgb(255, 0, 0);
 }
