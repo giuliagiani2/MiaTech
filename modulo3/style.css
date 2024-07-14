@@ -116,8 +116,6 @@ li {
     display: block;
 }
 
-
-
 .hide {
     display: none;
 }
@@ -138,6 +136,16 @@ li {
     padding: 20px;
     margin: 20px;
     width: 200px;
+}
+
+.p-sotto {
+    display: block;
+    float: none;
+    background-color: blue;
+    padding: 15px;
+    margin: 15px;
+    border: 10px solid yellow;
+    clear: both;
 }
 
 p {
