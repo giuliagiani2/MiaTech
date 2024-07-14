@@ -169,6 +169,18 @@ li {
     border: 15px;
 }
 
+.navbar {
+    position: sticky;
+    top: 35px;
+    display: inline-block;
+    background-color: violet;
+    text-align: center;
+    margin: 25px;
+    padding: 30px;
+    border: 15px double black;
+    width: 700px;
+}
+
 p {
     color: rgb(255, 0, 0);
 }
