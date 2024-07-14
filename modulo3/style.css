@@ -260,3 +260,13 @@ border: 2px solid peru;
     height: 200px;
     border: 2.5px solid rosybrown;
 }
+
+.rem {
+    font-size: 7rem;
+    padding: var(--trasparenza);
+    }
+    
+    .em {
+    font-size: 7em;
+    padding: var(--trasparenza);
+    }
