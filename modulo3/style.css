@@ -181,6 +181,21 @@ li {
     width: 700px;
 }
 
+.sinistra {
+    display: block;
+    float: left;
+}
+
+.centro {
+    display: block;
+    text-align: center;
+}
+
+.destra {
+    display: block;
+    float: right;
+}
+
 p {
     color: rgb(255, 0, 0);
 }
@@ -195,4 +210,11 @@ p.myclass-3 {
 
 p {
     color: red;
+}
+
+footer{
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 10px;
+    margin: 350px;
 }
