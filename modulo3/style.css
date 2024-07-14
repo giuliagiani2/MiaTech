@@ -218,3 +218,28 @@ footer{
     padding: 10px;
     margin: 350px;
 }
+
+.container {
+    position: relative;
+}
+
+.quadrato {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 2px solid salmon;
+    width: 150px;
+    height: 150px;
+}
+
+.quadrato-fisso {
+    position: absolute;
+    border: 2px solid salmon;
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+    padding: 15px;
+    bottom: 0;
+    right: 0;
+    margin-right: 10px;
+}
