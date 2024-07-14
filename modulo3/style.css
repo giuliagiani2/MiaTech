@@ -1,5 +1,6 @@
 :root {
     --colore-principale: red;
+    --trasparenza:20px;
 }
 
 * {
@@ -269,8 +270,10 @@ footer {
 
 .rem {
     font-size: 7rem;
+    padding: var(--trasparenza);
 }
 
 .em {
     font-size: 7em;
+    padding: var(--trasparenza);
 }
