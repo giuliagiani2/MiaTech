@@ -244,7 +244,7 @@ footer{
     margin-right: 10px;
 }
 
-.elemento-padre-1 {
+.elemento-padre-1 , .elemento-padre-2 {
     width: 500px;
     height: 500px;
 }
@@ -253,4 +253,10 @@ footer{
 width: 50%;
 height: 50%;
 border: 2px solid peru;
+}
+
+.pixel {
+    width: 200px;
+    height: 200px;
+    border: 2.5px solid rosybrown;
 }
