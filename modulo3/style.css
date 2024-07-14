@@ -1,5 +1,10 @@
+:root {
+    --colore-principale: red;
+}
+
 * {
     text-align: right;
+    color: var(--colore-principale);
 }
 
 h1 {
@@ -96,7 +101,7 @@ li {
     border: 10px;
     background-color: indianred;
     height: 250px;
-    width: 300px; 
+    width: 300px;
     display: inline;
 }
 
@@ -104,7 +109,7 @@ li {
     border: 10px;
     background-color: indianred;
     height: 250px;
-    width: 300px; 
+    width: 300px;
     display: inline-block;
 }
 
@@ -112,7 +117,7 @@ li {
     border: 10px;
     background-color: indianred;
     height: 250px;
-    width: 300px; 
+    width: 300px;
     display: block;
 }
 
@@ -212,7 +217,7 @@ p {
     color: red;
 }
 
-footer{
+footer {
     background-color: #F1F1F1;
     text-align: center;
     padding: 10px;
@@ -244,15 +249,16 @@ footer{
     margin-right: 10px;
 }
 
-.elemento-padre-1 , .elemento-padre-2 {
+.elemento-padre-1,
+.elemento-padre-2 {
     width: 500px;
     height: 500px;
 }
 
 .percentuale {
-width: 50%;
-height: 50%;
-border: 2px solid peru;
+    width: 50%;
+    height: 50%;
+    border: 2px solid peru;
 }
 
 .pixel {
@@ -263,10 +269,8 @@ border: 2px solid peru;
 
 .rem {
     font-size: 7rem;
-    padding: var(--trasparenza);
-    }
-    
-    .em {
+}
+
+.em {
     font-size: 7em;
-    padding: var(--trasparenza);
-    }
+}
