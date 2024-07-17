@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+.img {
+    width: 200px;
+}
+
+.card1 {
+    display: inline-block;
+    padding: 20px;
+    margin: 20px;
+    width: 200px;
+}
+
+.card1-img1 {
+    width: 200px;
+}
+
+.card2-img2 {
+    width: 200px;
+}
+
+.card2 {
+    display: inline-block;
+    padding: 20px;
+    margin: 20px;
+    width: 200px;
+}

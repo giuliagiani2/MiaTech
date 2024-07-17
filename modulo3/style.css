@@ -277,3 +277,7 @@ footer {
     font-size: 7em;
     padding: var(--trasparenza);
 }
+
+.flex-container {
+    display: flex;
+}

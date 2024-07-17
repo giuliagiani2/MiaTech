@@ -1,0 +1,61 @@
+.hiro-section {
+    background-color: darkgray;
+    text-align: center;
+    padding: 30px;
+    border: 1px solid black;
+}
+
+.navbar {
+    background-color: darkgray;
+    text-align: center;
+    padding: 30px;
+    border: 1px solid black;
+}
+
+.main {
+    width: 100%;
+}
+
+.one {
+    display: block;
+    float: left;
+    background-color: darkgray;
+    height: 250px;
+    padding: 108px 15px 100px 15px;
+    width: 17%;
+    text-align: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.two {
+    display: block;
+    float: left;
+    background-color: darkgray;
+    height: 250px;
+    padding: 108px 15px 100px 15px;
+    width: 66%;
+    text-align: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.three {
+    display: block;
+    float: right;
+    background-color: darkgray;
+    height: 250px;
+    padding: 108px 15px 100px 15px;
+    width: 17%;
+    text-align: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.foot {
+background-color: darkgray;
+text-align: center;
+padding: 30px;
+border: 1px solid black;
+clear: both;
+}

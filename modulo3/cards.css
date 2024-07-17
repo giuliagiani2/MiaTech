@@ -1,0 +1,30 @@
+.container {
+    display: inline-block;
+    margin: 20px;
+    width: 40%;
+}
+
+.img {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+}
+
+.card1 {
+    display: block;
+    float: left;
+    padding: 20px;
+    margin: 20px;
+    width: 200px;
+}
+
+.card1-img1 {
+    width: 100%;
+}
+
+.card2 {
+    display: block;
+    float: right;
+    padding: 20px;
+    margin: 20px;
+    width: 200px;
+}
