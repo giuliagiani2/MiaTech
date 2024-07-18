@@ -1,29 +1,26 @@
 .container {
-    display: inline-block;
+    display: flex;
     margin: 20px;
-    width: 40%;
 }
 
-.img {
-    border-radius: 5px 5px 0 0;
-    width: 100%;
-}
 
 .card1 {
-    display: block;
-    float: left;
+    display: inline-block;
     padding: 20px;
     margin: 20px;
     width: 200px;
 }
 
-.card1-img1 {
-    width: 100%;
+.img-1 {
+    width: 200px;
+}
+
+.img-2 {
+    width: 200px;
 }
 
 .card2 {
-    display: block;
-    float: right;
+    display: inline-block;
     padding: 20px;
     margin: 20px;
     width: 200px;

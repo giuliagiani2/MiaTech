@@ -6,9 +6,15 @@
     justify-content: center;
 }
 
-.felx-item {
+.felx-items > div {
+    display: flex;
     padding: 10px;
     margin: 10px;
     background-color: aquamarine;
+    width: 100px;
+}
+
+.felx-item-3 {
+    flex-grow: 3;
     width: 100px;
 }
