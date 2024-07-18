@@ -1,4 +1,4 @@
-
+/*FLEX CONTAINER*/
 
 .flex-items > div {
     padding: 10px;
@@ -22,3 +22,5 @@
 .flex-item-3 {
     align-self: flex-end;
 }
+
+/*GRID CONTAINER*/
