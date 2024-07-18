@@ -15,6 +15,15 @@
     justify-content: center;
 }
 
+/*
+.flex-item-1 {
+    flex-shrink: 0.5;
+}*/
+
+.flex-item-2 {
+    flex-basis: 75px;
+}
+
 .flex-item-3 {
     flex-grow: 3;
 }
