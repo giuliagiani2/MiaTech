@@ -34,4 +34,7 @@
     border: 1px solid black;
   }
 
- 
+  .grid-item-8 {
+    grid-column: 2 / span 2;
+  }
+
