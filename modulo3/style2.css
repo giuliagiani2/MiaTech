@@ -34,7 +34,10 @@
     border: 1px solid black;
   }
 
+  .grid-item-1 {
+    grid-row: 1 / span 2;
+}
+
   .grid-item-8 {
     grid-column: 2 / span 2;
   }
-
