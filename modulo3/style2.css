@@ -4,7 +4,6 @@
     padding: 10px;
     margin: 10px;
     background-color: aquamarine;
-    width: 100px;
 }
 
 .flex-items {
@@ -15,6 +14,12 @@
     justify-content: center;
 }
 
+.flex-item-1 {
+    flex-shrink: 0.5;
+    width: 70px;
+  }
+
+  /*
 .flex-item-2 {
     align-self: flex-start;
 }
@@ -22,6 +27,7 @@
 .flex-item-3 {
     align-self: flex-end;
 }
+*/
 
 /*GRID CONTAINER*/
 .grid-container {
