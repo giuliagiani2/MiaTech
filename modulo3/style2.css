@@ -24,3 +24,14 @@
 }
 
 /*GRID CONTAINER*/
+.grid-container {
+    display: grid;
+}
+
+.grid-container div {
+    background-color: palegreen;
+    padding: 20px;
+    border: 1px solid black;
+  }
+
+ 
