@@ -19,7 +19,6 @@
     width: 70px;
   }
 
-  /*
 .flex-item-2 {
     align-self: flex-start;
 }
@@ -27,7 +26,6 @@
 .flex-item-3 {
     align-self: flex-end;
 }
-*/
 
 /*GRID CONTAINER*/
 .grid-container {
@@ -46,4 +44,17 @@
 
   .grid-item-8 {
     grid-column: 2 / span 2;
+  }
+
+  /*GRID CONTAINER 2*/
+  .grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .grid-container2 div {
+    background-color: rebeccapurple;
+    padding: 20px;
+    border: 1px solid black;
   }
