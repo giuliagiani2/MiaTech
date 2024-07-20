@@ -52,6 +52,8 @@
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-rows: 1fr 3fr;
+    justify-items: center;
+    align-items: center;
   }
 
   .grid-container2 div {
