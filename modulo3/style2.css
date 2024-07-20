@@ -61,3 +61,25 @@
     padding: 20px;
     border: 1px solid black;
   }
+
+  /*GRID CALCOLATRICE*/
+.grid-calcolatrice {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.grid-calcolatrice div {
+  background-color: grey;
+  padding: 20px;
+  border: 1px solid white;
+  text-align: center;
+}
+
+.grid-calcolatrice .rosybrown {
+  background-color: rosybrown;
+}
+
+.grid-calcolatrice .blue {
+  background-color: lightskyblue;
+}
