@@ -83,3 +83,10 @@
 .grid-calcolatrice .blue {
   background-color: lightskyblue;
 }
+
+/*SOLO MOBILE*/
+@media screen and (max-width: 768px) {
+  body {
+    background-color: blue;
+  }
+}
