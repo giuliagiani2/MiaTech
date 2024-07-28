@@ -29,5 +29,17 @@ nav .nav__menu .nav__menu-item a {
 nav .nav__menu .nav__menu-item a:hover {
   color: #ff0000;
 }
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.container .element-1 {
+  border: 1px solid silver;
+  flex: 33.33%;
+}
+.container .element-2 {
+  border: 1px solid silver;
+  flex: 1;
+}
 
 /*# sourceMappingURL=index.css.map */

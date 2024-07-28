@@ -41,3 +41,18 @@ nav {
         }
     }
 }
+
+.container {
+    display: flex;
+    justify-content: space-between;
+
+    .element-1 {
+        border: 1px solid silver;
+        flex: 33.33%;
+    }
+
+    .element-2 {
+        border: 1px solid silver;
+        flex: 1;
+    }
+}
