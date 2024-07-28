@@ -1,0 +1,9 @@
+$primary-color: red;
+$secondary-color: black;
+$background-color: wheat;
+
+.colors {
+    background-color: $background-color;
+    color: $primary-color;
+    accent-color: $secondary-color;
+}
