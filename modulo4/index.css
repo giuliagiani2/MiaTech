@@ -1,3 +1,9 @@
+/*NAVBAR*/
+nav .nav__menu .nav__menu-item:last-child {
+  background-color: #e7e7e7;
+  border: 2px double #333333;
+}
+
 nav {
   display: flex;
   padding: 20px;
@@ -17,7 +23,7 @@ nav .nav__menu .nav__menu-item {
   margin-right: 20px;
 }
 nav .nav__menu .nav__menu-item a {
-  text-decoration: none;
+  text-decoration-line: none;
   font-size: 18px;
 }
 nav .nav__menu .nav__menu-item a:hover {

@@ -1,5 +1,11 @@
-$color-text:#ff0000;
+$color-text: #ff0000;
 $font-size: 18px;
+
+/*NAVBAR*/
+%nav-extension-contact {
+    background-color: #e7e7e7;
+    border: 2px double #333333;
+}
 
 nav {
     display: flex;
@@ -19,13 +25,19 @@ nav {
         .nav__menu-item {
             margin-right: 20px;
         }
+
         .nav__menu-item a {
-            text-decoration: none;
+            text-decoration-line: none;
             font-size: $font-size;
 
             &:hover {
-                color:$color-text;
+                color: $color-text;
             }
+
+        }
+
+        .nav__menu-item:last-child {
+            @extend %nav-extension-contact;
         }
     }
 }
