@@ -2,7 +2,7 @@ $color-text: #ff0000;
 $font-size: 18px;
 
 /*VAriabile*/
-@import 'colors';
+@use 'colors';
 
 /*NAVBAR*/
 %nav-extension-contact {

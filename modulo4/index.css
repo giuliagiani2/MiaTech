@@ -1,3 +1,10 @@
+/*VAriabile*/
+.colors {
+  background-color: wheat;
+  color: red;
+  accent-color: black;
+}
+
 /*NAVBAR*/
 nav .nav__menu .nav__menu-item:last-child {
   background-color: #e7e7e7;
