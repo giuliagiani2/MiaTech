@@ -7,3 +7,15 @@ $background-color: wheat;
     color: $primary-color;
     accent-color: $secondary-color;
 }
+
+//Lista di colori
+$colors: #ff00ff, #00ff00, #0000ff, #ff9900;
+
+
+@each $color in $colors {
+    
+    $colo: index($colors, $color);
+    .color-#{$colo} {
+        background-color: $color; 
+        }
+}

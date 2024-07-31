@@ -38,6 +38,22 @@ nav {
 
         .nav__menu-item {
             margin-right: 20px;
+            
+            &.color-1 {
+                @extend .color-1; 
+            }
+
+            &.color-2 {
+                @extend .color-2;
+            }
+
+            &.color-3 {
+                @extend .color-3;
+            }
+
+            &.color-4 {
+                @extend .color-4;
+            }
         }
 
         .nav__menu-item a {

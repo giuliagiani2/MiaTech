@@ -5,6 +5,22 @@
   accent-color: black;
 }
 
+.color-1, nav .nav__menu .nav__menu-item.color-1 {
+  background-color: #ff00ff;
+}
+
+.color-2, nav .nav__menu .nav__menu-item.color-2 {
+  background-color: #00ff00;
+}
+
+.color-3, nav .nav__menu .nav__menu-item.color-3 {
+  background-color: #0000ff;
+}
+
+.color-4, nav .nav__menu .nav__menu-item.color-4 {
+  background-color: #ff9900;
+}
+
 /*
     .a .b .c {
     display: flex;
