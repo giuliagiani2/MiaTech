@@ -5,6 +5,19 @@
   accent-color: black;
 }
 
+/*
+    .a .b .c {
+    display: flex;
+    }
+
+    .a {
+        .b {
+            .c{
+                display: flex;
+            }
+        }
+    }
+*/
 /*NAVBAR*/
 nav .nav__menu .nav__menu-item:last-child {
   background-color: #e7e7e7;
@@ -16,6 +29,24 @@ nav {
   padding: 20px;
   text-align: center;
   justify-content: center;
+}
+nav.light {
+  background-color: white;
+}
+nav.light .nav__menu .nav__menu-item a {
+  color: black;
+}
+nav.light .nav__menu .nav__menu-item a:hover {
+  color: #ff0000;
+}
+nav.dark {
+  background-color: #000000;
+}
+nav.dark .nav__menu .nav__menu-item a {
+  color: white;
+}
+nav.dark .nav__menu .nav__menu-item a:hover {
+  color: yellow;
 }
 nav .nav__menu {
   display: flex;

@@ -3,6 +3,7 @@ $font-size: 18px;
 
 /*VAriabile*/
 @use 'colors';
+@import 'navbar';
 
 /*NAVBAR*/
 %nav-extension-contact {
@@ -15,6 +16,14 @@ nav {
     padding: 20px;
     text-align: center;
     justify-content: center;
+
+    &.light {
+        @include light-theme;
+    }
+
+    &.dark {
+        @include dark-theme;
+    }
 
     .nav__menu {
         display: flex;

@@ -1,0 +1,53 @@
+//Colori per il tema chiaro
+$light-navbar-background-color: white;
+$light-navbar-item-color: black;
+$light-navbar-item-hover-color: #ff0000;
+
+//Colori per il tema scuro
+$dark-navbar-background-color: #000000;
+$dark-navbar-item-color: white;
+$dark-navbar-item-hover-color: yellow;
+
+
+/*
+    .a .b .c {
+    display: flex;
+    }
+
+    .a {
+        .b {
+            .c{
+                display: flex;
+            }
+        }
+    }
+*/
+//tema chiaro
+@mixin light-theme {
+    background-color: $light-navbar-background-color;
+
+    .nav__menu {
+        .nav__menu-item a {
+            color: $light-navbar-item-color;
+
+            &:hover {
+                color: $light-navbar-item-hover-color;
+            }
+        }
+    }
+}
+
+//tema scuro
+@mixin dark-theme {
+    background-color: $dark-navbar-background-color;
+
+    .nav__menu {
+        .nav__menu-item a {
+            color: $dark-navbar-item-color;
+
+            &:hover {
+                color: $dark-navbar-item-hover-color;
+            }
+        }
+    }
+}
