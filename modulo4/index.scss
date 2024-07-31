@@ -1,6 +1,8 @@
 $color-text: #ff0000;
 $font-size: 18px;
 
+@use 'sass:math';
+
 /*VAriabile*/
 @use 'colors';
 @import 'navbar';
@@ -67,4 +69,17 @@ nav {
         border: 1px solid silver;
         flex: 1;
     }
+}
+
+//Covertitore da pixel a em
+@function px-to-em($px, $base: 16px) {
+    @return math.div($px, $base) * 1em;
+}
+
+.esempio {
+    font-size: px-to-em(24px);
+}
+
+.esempio-1 {
+    font-size: px-to-em(72px);
 }
