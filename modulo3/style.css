@@ -176,7 +176,7 @@ li {
 }
 
 .navbar {
-    position: sticky;
+    position: fixed;
     top: 35px;
     display: inline-block;
     background-color: violet;
@@ -185,6 +185,7 @@ li {
     padding: 30px;
     border: 15px double black;
     width: 700px;
+    left: 100px;
 }
 
 .sinistra {
