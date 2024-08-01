@@ -1,5 +1,4 @@
 /*FLEX CONTAINER*/
-
 .flex-items>div {
   padding: 10px;
   margin: 10px;
@@ -93,6 +92,12 @@
 
 /*SEZIONE FULLSCREEN*/
 .full-screen {
+  width: 100vw;
+  height: 100vh;
+  background-color: chocolate;
+}
+
+/*.full-screen {
   position: fixed;
   top: 0;
   right: 0;
@@ -102,4 +107,4 @@
   height: 100%;
   overflow: auto;
   background-color: chocolate;
-}
+}*/
