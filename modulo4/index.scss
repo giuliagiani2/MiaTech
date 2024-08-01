@@ -1,5 +1,6 @@
 $color-text: #ff0000;
 $font-size: 18px;
+$noHover: false;
 
 @use 'sass:math';
 
@@ -60,9 +61,18 @@ nav {
             text-decoration-line: none;
             font-size: $font-size;
 
-            &:hover {
-                color: $color-text;
+            @if $noHover == false {
+                &:hover {
+                    color: $color-text;
+                }
+            } @else {
+                &:hover {
+                    color: black;
+                }
             }
+            /*&:hover {
+                color: $color-text;
+            }*/
 
         }
 

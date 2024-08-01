@@ -79,6 +79,9 @@ nav .nav__menu .nav__menu-item {
 nav .nav__menu .nav__menu-item a {
   text-decoration-line: none;
   font-size: 18px;
+  /*&:hover {
+      color: $color-text;
+  }*/
 }
 nav .nav__menu .nav__menu-item a:hover {
   color: #ff0000;
