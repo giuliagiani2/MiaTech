@@ -38,9 +38,9 @@ nav {
 
         .nav__menu-item {
             margin-right: 20px;
-            
+
             &.color-1 {
-                @extend .color-1; 
+                @extend .color-1;
             }
 
             &.color-2 {
@@ -75,6 +75,30 @@ nav {
 .container {
     display: flex;
     justify-content: space-between;
+
+
+    @for $i from 1 through 3 {
+        .item-#{$i} {
+            width: 100px * $i;
+        }
+    }
+
+    @for $i from 1 through 2 {
+        .element-#{$i} {
+            padding: 20px;
+
+            @if $i ==1 {
+                background-color: lighten(#837eff, 20%); // Sfondo chiaro
+            }
+
+            @else {
+                background-color: darken(#6a7832, 20%); // Sfondo scuro
+            }
+
+
+        }
+
+    }
 
     .element-1 {
         border: 1px solid silver;

@@ -87,6 +87,23 @@ nav .nav__menu .nav__menu-item a:hover {
   display: flex;
   justify-content: space-between;
 }
+.container .item-1 {
+  width: 100px;
+}
+.container .item-2 {
+  width: 200px;
+}
+.container .item-3 {
+  width: 300px;
+}
+.container .element-1 {
+  padding: 20px;
+  background-color: #e5e4ff;
+}
+.container .element-2 {
+  padding: 20px;
+  background-color: #2a3014;
+}
 .container .element-1 {
   border: 1px solid silver;
   flex: 33.33%;
