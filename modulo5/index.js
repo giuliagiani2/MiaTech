@@ -13,6 +13,7 @@ console.log(var3);
 var3 = 8;
 console.log(var3);
 
+
 //RIDEFINIZIONE DI VARIABILE
 let number = 24;
 {
@@ -20,3 +21,14 @@ let number = 24;
     console.log(number);
 }
 console.log(number);
+
+
+//SCOPING DELLE VARIABILI
+let outside = 17;
+{
+    let inside = 19;
+    console.log(outside);
+    console.log(inside);
+}
+console.log(outside);
+console.log(inside);
