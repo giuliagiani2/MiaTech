@@ -32,3 +32,9 @@ let outside = 17;
 }
 console.log(outside);
 console.log(inside);
+
+
+//GENERA NUMERI PARI
+for (let i = 0; i <= 20; i = i + 2) {
+    console.log(i);
+}
