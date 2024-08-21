@@ -38,3 +38,11 @@ console.log(inside);
 for (let i = 0; i <= 20; i = i + 2) {
     console.log(i);
 }
+
+
+//NUMERI DISPARI DECRESCENTI
+let disp = 9;
+while (disp > 0) {
+    console.log(disp);
+    disp = disp - 2;
+}
