@@ -49,6 +49,13 @@ while (disp > 0) {
 
 
 //IL PROMPT E LA LUNGHEZZA DELLA PAROLA
-let word=prompt("Inserisci una parola");
+let word = prompt("Inserisci una parola");
 console.log(word);
 console.log(word.length);
+
+
+//RICHIESTA DI IMPUT CORRETTO
+do {
+    word = prompt("Inserisci una parola con max 5 caratteri");
+} while (word.length < 5);
+console.log(word);
