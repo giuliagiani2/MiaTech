@@ -62,18 +62,18 @@ console.log(word);
 
 
 //IF & ELSE
-const number=11;
+const number = 11;
 {
-    if(number>5){
+    if (number > 5) {
         console.log("La variabile è maggiore di 5");
-    }else{
+    } else {
         console.log("La variabile è minore di 5");
     }
 }
 
 
 //IF, ELSE & ELSE-IF
-const score=prompt("Inserisci un valore numerico");
+const score = prompt("Inserisci un valore numerico");
 {
     if (score <= 100 && score >= 90) {
         console.log("Voto ottimo");
@@ -81,9 +81,42 @@ const score=prompt("Inserisci un valore numerico");
         console.log("Voto buono");
     } else if (score <= 69 && score >= 60) {
         console.log("Voto sufficiente");
-    } else if (score < 60){
+    } else if (score < 60) {
         console.log("Voto insufficiente");
-    }else {
+    } else {
         console.log("Voto inserito non valido");
     }
+}
+
+
+//VERIFICA IL PUNTEGGIO
+let classific;
+if (score <= 100 && score >= 90) {
+    classific = 90;
+} else if (score <= 89 && score >= 70) {
+    classific = 70;
+} else if (score <= 69 && score >= 60) {
+    classific = 60;
+} else if (score < 60) {
+    classific = 50;
+} else {
+    classific = null;
+}
+
+switch (classific) {
+    case 90:
+        console.log("Voto ottimo");
+        break;
+    case 70:
+        console.log("Voto buono");
+        break;
+    case 60:
+        console.log("Voto sufficiente");
+        break;
+    case 50:
+        console.log("Voto insufficiente");
+        break;
+    default:
+        console.log("Voto inserito non valido");
+        break;
 }
