@@ -46,3 +46,9 @@ while (disp > 0) {
     console.log(disp);
     disp = disp - 2;
 }
+
+
+//IL PROMPT E LA LUNGHEZZA DELLA PAROLA
+let word=prompt("Inserisci una parola");
+console.log(word);
+console.log(word.length);
