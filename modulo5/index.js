@@ -59,3 +59,14 @@ do {
     word = prompt("Inserisci una parola con max 5 caratteri");
 } while (word.length < 5);
 console.log(word);
+
+
+//IF & ELSE
+const number=11;
+{
+    if(number>5){
+        console.log("La variabile è maggiore di 5");
+    }else{
+        console.log("La variabile è minore di 5");
+    }
+}
