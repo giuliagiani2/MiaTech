@@ -70,3 +70,20 @@ const number=11;
         console.log("La variabile è minore di 5");
     }
 }
+
+
+//IF, ELSE & ELSE-IF
+const score=prompt("Inserisci un valore numerico");
+{
+    if (score <= 100 && score >= 90) {
+        console.log("Voto ottimo");
+    } else if (score <= 89 && score >= 70) {
+        console.log("Voto buono");
+    } else if (score <= 69 && score >= 60) {
+        console.log("Voto sufficiente");
+    } else if (score < 60){
+        console.log("Voto insufficiente");
+    }else {
+        console.log("Voto inserito non valido");
+    }
+}
