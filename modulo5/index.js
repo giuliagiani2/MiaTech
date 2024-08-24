@@ -178,3 +178,9 @@ console.log(person.age);
 //AGGIUNGI UNA NUOVA PROPRIETA'
 person.job = "student";
 console.log(person.job);
+
+
+//ITERAZIONE DELLE PROPRIETA'
+for (let i in person) {
+    console.log(i, person[i]);
+}
