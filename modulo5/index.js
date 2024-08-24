@@ -281,3 +281,15 @@ const firstFailed = students.find((value) => {
 
 console.log(passedStudents);
 console.log(firstFailed);
+
+
+//REDUCE & SORT
+const expenses = [30, 54, 82, 46, 31];
+const somma = expenses.reduce((acc, curr) => {
+    return acc + curr;
+});
+const words = ["banana", "apple", "cherry", "date"];
+const order = words.sort();
+
+console.log("La somma totale delle spese è di " + somma + "euro");
+console.log("L'array ordinato è " + order);
