@@ -250,3 +250,16 @@ entry.forEach((element) => {
     const [key, value] = element;
     console.log(key + " = " + value);
 });
+
+
+//FOREACH & MAP
+const numbers = [1, 2, 3, 4, 5];
+
+const sum = numbers.forEach((value) => {
+    console.log("I numeri moltiplicati per 2 sono:" + value * 2);
+});
+
+const squareNumbers = numbers.map((value) => {
+    return value * value;
+});
+console.log("I quadrati dei numeri dell'array sono " + squareNumbers);
