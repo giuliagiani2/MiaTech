@@ -134,3 +134,11 @@ for (let i = 0; i < numbers.length; i++) {
     somma = somma + numbers[i];
 }
 console.log(somma);
+
+
+//ARRAY REVERSE
+const numInvert = [];
+for (let i = numbers.length - 1; i >= 0; i--) {
+    numInvert.push(numbers[i]);
+}
+console.log(numInvert);
