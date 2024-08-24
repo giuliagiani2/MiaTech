@@ -224,3 +224,14 @@ console.log(conter.decrement());
 console.log(conter.decrement());
 console.log(conter.decrement());
 console.log(conter.increment());
+
+
+//OBJECT.KEYS
+const student = {
+    name: "Marco",
+    age: 15,
+    grade: "Scuola superiore",
+    school: "L. Da Vinci"
+}
+const key = Object.keys(student);
+console.log(key);
