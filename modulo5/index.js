@@ -168,3 +168,8 @@ console.log(person);
 
 //ACCEDI ALLE PROPRIETA'
 console.log(person.age);
+
+
+//MODIFICA LA PROPRIETA'
+person.age = 18;
+console.log(person.age);
