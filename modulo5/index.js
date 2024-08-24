@@ -240,3 +240,13 @@ console.log(key);
 //OBJECT.VALUES
 const value = Object.values(student);
 console.log(value);
+
+
+//OBJECT.ENTRIES
+const entry = Object.entries(student);
+console.log(entry);
+
+entry.forEach((element) => {
+    const [key, value] = element;
+    console.log(key + " = " + value);
+});
