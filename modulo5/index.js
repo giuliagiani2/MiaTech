@@ -120,3 +120,8 @@ switch (classific) {
         console.log("Voto inserito non valido");
         break;
 }
+
+
+//ARRAY DI NUMERI
+const numbers = [10, 8, 22, 2, 4];
+console.log(numbers);
