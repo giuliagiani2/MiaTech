@@ -164,3 +164,7 @@ const person = {
     city: "Milano"
 }
 console.log(person);
+
+
+//ACCEDI ALLE PROPRIETA'
+console.log(person.age);
