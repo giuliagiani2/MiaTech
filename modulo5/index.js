@@ -184,3 +184,21 @@ console.log(person.job);
 for (let i in person) {
     console.log(i, person[i]);
 }
+
+
+//FUNZIONI ANNIDATE
+function outerFunction(x, initialValue) {
+    let result = initialValue;
+    function innerFunction(y) {
+        result += y;
+        return result;
+    }
+    return innerFunction;
+}
+const somma = outerFunction(2);
+const initial = outerFunction(5, 10);
+console.log(somma(3));
+console.log(somma(4));
+
+console.log(initial(7));
+console.log(initial(10));
