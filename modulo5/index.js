@@ -155,3 +155,12 @@ for (let i = 0; i < parole.length; i++) {
         console.log(parole[i]);
     }
 }
+
+
+//CREA UN OGGETTO
+const person = {
+    name: "Giulia",
+    age: 20,
+    city: "Milano"
+}
+console.log(person);
