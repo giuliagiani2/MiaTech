@@ -187,18 +187,12 @@ for (let i in person) {
 
 
 //FUNZIONI ANNIDATE
-function outerFunction(x, initialValue) {
-    let result = initialValue;
+function outerFunction(x) {
     function innerFunction(y) {
-        result = result + y;
-        return result;
+        return x + y;
     }
     return innerFunction;
 }
 const somma = outerFunction(2);
-const initial = outerFunction(5, 10);
 console.log(somma(3));
 console.log(somma(4));
-
-console.log(initial(7));
-console.log(initial(10));
