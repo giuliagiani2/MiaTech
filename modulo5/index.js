@@ -263,3 +263,21 @@ const squareNumbers = numbers.map((value) => {
     return value * value;
 });
 console.log("I quadrati dei numeri dell'array sono " + squareNumbers);
+
+
+//FILTER & FIND
+const students = [
+    { name: "Alfa", grade: 48 },
+    { name: "Beta", grade: 96 },
+    { name: "Gamma", grade: 99 },
+    { name: "Delta", grade: 58 }
+];
+const passedStudents = students.filter((value) => {
+    return value.grade >= 60;
+});
+const firstFailed = students.find((value) => {
+    return value.grade < 60;
+});
+
+console.log(passedStudents);
+console.log(firstFailed);
