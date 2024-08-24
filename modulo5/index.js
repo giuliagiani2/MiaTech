@@ -187,12 +187,40 @@ for (let i in person) {
 
 
 //FUNZIONI ANNIDATE
-function outerFunction(x) {
+function outerFunciot(x, initialValue) {
+    let result = initialValue;
     function innerFunction(y) {
-        return x + y;
+        result += y;
+        return result;
     }
     return innerFunction;
 }
-const somma = outerFunction(2);
+
+const somma = outerFunciot(2);
+const initial = outerFunciot(5, 10);
 console.log(somma(3));
 console.log(somma(4));
+
+console.log(initial(7));
+console.log(initial(10));
+
+
+//COUNTER
+function createCounter() {
+    let cont = 0;
+    return {
+        increment: function () {
+            cont += 1;
+            return cont;
+        },
+        decrement: function () {
+            cont -= 1;
+            return cont;
+        }
+    };
+}
+const conter = createCounter();
+console.log(conter.decrement());
+console.log(conter.decrement());
+console.log(conter.decrement());
+console.log(conter.increment());
