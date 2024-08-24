@@ -173,3 +173,8 @@ console.log(person.age);
 //MODIFICA LA PROPRIETA'
 person.age = 18;
 console.log(person.age);
+
+
+//AGGIUNGI UNA NUOVA PROPRIETA'
+person.job = "student";
+console.log(person.job);
