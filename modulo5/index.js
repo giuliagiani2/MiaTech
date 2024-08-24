@@ -125,3 +125,12 @@ switch (classific) {
 //ARRAY DI NUMERI
 const numbers = [10, 8, 22, 2, 4];
 console.log(numbers);
+
+
+//SOMMA I NUMERI
+let somma = 0;
+
+for (let i = 0; i < numbers.length; i++) {
+    somma = somma + numbers[i];
+}
+console.log(somma);
