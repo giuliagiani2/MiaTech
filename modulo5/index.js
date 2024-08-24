@@ -190,7 +190,7 @@ for (let i in person) {
 function outerFunction(x, initialValue) {
     let result = initialValue;
     function innerFunction(y) {
-        result += y;
+        result = result + y;
         return result;
     }
     return innerFunction;
