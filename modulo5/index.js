@@ -142,3 +142,16 @@ for (let i = numbers.length - 1; i >= 0; i--) {
     numInvert.push(numbers[i]);
 }
 console.log(numInvert);
+
+
+//POPOLAMENTO ARRAY
+let parole = [];
+for (let i = 0; i < 5; i++) {
+    parola = prompt("Inserisci parola");
+    parole.push(parola);
+}
+for (let i = 0; i < parole.length; i++) {
+    if (parole[i].length % 2 !== 0) {
+        console.log(parole[i]);
+    }
+}
