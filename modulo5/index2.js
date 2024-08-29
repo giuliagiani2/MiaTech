@@ -30,13 +30,9 @@ class Automobile {
         return `Automobile: ${this.chilometraggio} km`;
     }
 
-    ricarica(km) {
-        if (km > 0) {
-            this.autonomia += km;
-        } else {
-            console.log("Inserire valore positivo");
-        }
-    }
+    
+
+    
 }
 
 //SOTTOCLASSE ELETTRICA
@@ -45,6 +41,14 @@ class Elettrica extends Automobile {
     constructor(marca, modello, anno, autonomia) {
         super(marca, modello, anno);
         this.autonomia = autonomia;
+    }
+
+    ricarica(km) {
+        if (km > 0) {
+            this.autonomia += km;
+        } else {
+            console.log("Inserire valore positivo");
+        }
     }
 }
 
