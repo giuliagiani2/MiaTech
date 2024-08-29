@@ -49,6 +49,12 @@ class Elettrica extends Automobile {
 }
 
 
+//SALUTA
+Automobile.prototype.saluta = function () {
+    return `Sono l'auto ${this.marca} ${this.modello}.`;
+}
+
+
 //AUTOMOBILE
 const miaAuto = new Automobile("Opel", "Corsa", 2022);
 console.log(miaAuto.destrizione);
@@ -60,3 +66,6 @@ console.log(miaAuto.mostraChilometraggio());
 //SOTTOCLASSE ELETTRICA
 const autoElettrica = new Automobile("Tesla", "Model 2", 2023, 550);
 console.log(autoElettrica.destrizione());
+
+//SALUTA
+console.log(autoElettrica.saluta);
