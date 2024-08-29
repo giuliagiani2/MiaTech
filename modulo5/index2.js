@@ -25,7 +25,11 @@ class Automobile {
             console.log("Inserire valore positivo");
         }
     }
+    mostraChilometraggio() {
+        return `Automobile: ${this.chilometraggio} km`;
+    }
 }
+
 
 //AUTOMOBILE
 const miaAuto = new Automobile("Opel", "Corsa", 2022);
@@ -33,3 +37,4 @@ console.log(miaAuto.destrizione);
 
 //AGGIUNGI METODI & PROPRIETA'
 miaAuto.aggiungiChilometri(10);
+console.log(miaAuto.mostraChilometraggio());
