@@ -39,6 +39,13 @@ class Automobile {
         return `età dell'auto: ${this.#calcolaEta()}`;
     }
 
+    //METODO PROTEtTO
+    protetto_controllaChilometri() {
+        if (this.chilometraggio > 100000) {
+            console.log("Superato limite di chilometraggio");
+        }
+    }
+
 }
 
 //SOTTOCLASSE ELETTRICA
@@ -55,6 +62,11 @@ class Elettrica extends Automobile {
         } else {
             console.log("Inserire valore positivo");
         }
+    }
+
+    //METODO PROTETTO
+    protetto_controllaChilometri() {
+        super.protetto_controllaChilometri();
     }
 }
 
@@ -82,3 +94,9 @@ console.log(autoElettrica.saluta);
 
 //METODO PRIVATO
 console.log(miaAuto.mostraEta());
+
+//METODO PROTETTO
+autoElettrica.aggiungiChilometri(95000);
+console.log(autoElettrica.mostraChilometraggio());
+autoElettrica.aggiungiChilometri(10000);
+console.log(autoElettrica.mostraChilometraggio());
