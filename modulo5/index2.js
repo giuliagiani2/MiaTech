@@ -68,6 +68,17 @@ class Elettrica extends Automobile {
     protetto_controllaChilometri() {
         super.protetto_controllaChilometri();
     }
+
+    //CONFRONTA KM
+    static confrontaChilometraggio(auto1, auto2) {
+        if (auto1.chilometraggio > auto2.chilometraggio) {
+            return `La ${auto1.marca} ${auto1.modello} ha il chilometraggio maggiore`;
+        } else if (auto1.chilometraggio < auto2.chilometraggio) {
+            return `La ${auto2.marca} ${auto2.modello} ha il chilometraggio maggiore`;
+        } else {
+            return `Le due auto hanno lo stesso chilometraggio`;
+        }
+    }
 }
 
 
@@ -100,3 +111,10 @@ autoElettrica.aggiungiChilometri(95000);
 console.log(autoElettrica.mostraChilometraggio());
 autoElettrica.aggiungiChilometri(10000);
 console.log(autoElettrica.mostraChilometraggio());
+
+//CONFRONTA KM
+const auto1 = new Automobile("Ford", "Focus", 2011);
+const auto2 = new Automobile("Fiat", "Punto", 2010);
+auto1.aggiungiChilometri(300000);
+auto2.aggiungiChilometri(200000);
+console.log(Automobile.confrontaChilometraggio(auto1, auto2));
