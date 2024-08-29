@@ -15,6 +15,7 @@ class Automobile {
     }
     destrizione() {
         return `Automobile: ${this.marca} ${this.modello} ${this.anno}`;
+        return `Automobile: ${this.marca} ${this.modello} ${this.anno} ${this.autonomia}`;
     }
 
     //AGGIUNGI METODI & PROPRIETA'
@@ -28,6 +29,23 @@ class Automobile {
     mostraChilometraggio() {
         return `Automobile: ${this.chilometraggio} km`;
     }
+
+    ricarica(km) {
+        if (km > 0) {
+            this.autonomia += km;
+        } else {
+            console.log("Inserire valore positivo");
+        }
+    }
+}
+
+//SOTTOCLASSE ELETTRICA
+class Elettrica extends Automobile {
+    autonomia = 0;
+    constructor(marca, modello, anno, autonomia) {
+        super(marca, modello, anno);
+        this.autonomia = autonomia;
+    }
 }
 
 
@@ -38,3 +56,7 @@ console.log(miaAuto.destrizione);
 //AGGIUNGI METODI & PROPRIETA'
 miaAuto.aggiungiChilometri(10);
 console.log(miaAuto.mostraChilometraggio());
+
+//SOTTOCLASSE ELETTRICA
+const autoElettrica = new Automobile("Tesla", "Model 2", 2023, 550);
+console.log(autoElettrica.destrizione());
