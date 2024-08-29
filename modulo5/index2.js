@@ -30,9 +30,15 @@ class Automobile {
         return `Automobile: ${this.chilometraggio} km`;
     }
 
-    
+    //METODO PRIVATO
+    #calcolaEta() {
+        const annoOggi = new Date().getFullYear();
+        return annoOggi - this.anno;
+    }
+    mostraEta() {
+        return `età dell'auto: ${this.#calcolaEta()}`;
+    }
 
-    
 }
 
 //SOTTOCLASSE ELETTRICA
@@ -73,3 +79,6 @@ console.log(autoElettrica.destrizione());
 
 //SALUTA
 console.log(autoElettrica.saluta);
+
+//METODO PRIVATO
+console.log(miaAuto.mostraEta());
