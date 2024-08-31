@@ -18,7 +18,6 @@ class Automobile {
         this.#contatoreChiamate = 0;
     }
     descrizione() {
-        //this.#contatoreChiamate;
         return `Automobile: ${this.marca} ${this.modello} ${this.anno}.`;
     }
 
@@ -117,6 +116,16 @@ class Elettrica extends Automobile {
 
 }
 
+//CAMION
+class Camion extends Automobile {
+    constructor(marca, modello, anno) {
+        super(marca, modello, anno);
+    }
+
+    descrizione() {
+        return `Camion: ${this.marca} ${this.modello} ${this.anno}`;
+    }
+}
 
 //SALUTA
 Automobile.prototype.saluta = function () {
@@ -165,3 +174,7 @@ console.log(`Chilometraggio attuale: ${miaAuto.chilometraggioAttuale} km`);
 console.log("Impostato chilometraggio a 20 km:");
 miaAuto.chilometraggio = 20;
 console.log(miaAuto.mostraChilometraggio());
+
+//CAMION
+const mioCamion = new Camion("Iveco", "Boh", 2022);
+console.log(miaAuto.descrizione);
