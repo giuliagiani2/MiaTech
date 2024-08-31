@@ -84,6 +84,15 @@ class Automobile {
             console.log("Inserire un nuovo valore maggiore del valore corente");
         }
     }
+
+    //VERIFICA ISTANZA
+    static verificaIstanza(obj, classe) {
+        if (obj instanceof classe) {
+            return `L'oggetto è un'istanza della classe ${classe.name}.`;
+        } else {
+            return `L'oggetto non è un'istanza della classe ${classe.name}`;
+        }
+    }
 }
 
 //SOTTOCLASSE ELETTRICA
@@ -194,3 +203,9 @@ console.log(miaAuto.descrizione);
 mioCamion.carica(2500);
 mioCamion.carica(600);
 console.log(mioCamion.descrizione);
+
+//VERIFICA ISTANZA
+console.log(Automobile.verificaIstanza(miaAuto, Automobile));
+console.log(Automobile.verificaIstanza(mioCamion, Automobile));
+console.log(Automobile.verificaIstanza(miaAuto, Camion));
+console.log(Automobile.verificaIstanza(mioCamion, Camion));
