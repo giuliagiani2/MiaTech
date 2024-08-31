@@ -66,7 +66,7 @@ class Automobile {
     }
 
     //INCREMENTA CONTATORE
-    #incrementaChiamate() {
+    #incrementaContatore() {
         this.#contatoreChiamate++;
     }
 
@@ -145,5 +145,3 @@ auto1.aggiungiChilometri(300000);
 auto2.aggiungiChilometri(200000);
 console.log(Automobile.confrontaChilometraggio(auto1, auto2));
 
-//
-console.log(`Contatore chiamate: ${miaAuto.totContatoreChiamate()}`);
