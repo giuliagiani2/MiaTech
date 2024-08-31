@@ -26,13 +26,12 @@ class Automobile {
     aggiungiChilometri(km) {
         if (km > 0) {
             this.chilometraggio += km;
-            //this.#contatoreChiamate();
+            this.#incrementaContatore();
         } else {
             console.log("Inserire valore positivo");
         }
     }
     mostraChilometraggio() {
-        //this.#incrementaChiamate();
         return `Automobile: ${this.chilometraggio} km`;
     }
 
@@ -42,13 +41,11 @@ class Automobile {
         return annoOggi - this.anno;
     }
     mostraEta() {
-        //this.#incrementaChiamate();
         return `età dell'auto: ${this.#calcolaEta()}`;
     }
 
     //METODO PROTEtTO
     protetto_controllaChilometri() {
-        //this.#incrementaChiamate();
         if (this.chilometraggio > 100000) {
             console.log("Superato limite di chilometraggio");
         }
@@ -68,11 +65,6 @@ class Automobile {
     //INCREMENTA CONTATORE
     #incrementaContatore() {
         this.#contatoreChiamate++;
-    }
-
-    //
-    totContatoreChiamate() {
-        //this.#incrementaChiamate();
     }
 
 }
