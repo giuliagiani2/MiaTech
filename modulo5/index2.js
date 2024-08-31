@@ -118,12 +118,23 @@ class Elettrica extends Automobile {
 
 //CAMION
 class Camion extends Automobile {
-    constructor(marca, modello, anno) {
+    constructor(marca, modello, anno, caricoMassimo) {
         super(marca, modello, anno);
+        this.caricoMassimo = caricoMassimo;
+        this.caricoAttuale = 0;
+    }
+    descrizione() {
+        return `Camion: ${this.marca} ${this.modello} ${this.anno} ${this.caricoMassimo}. Il carico attuale è ${this.caricoAttuale}`;
     }
 
-    descrizione() {
-        return `Camion: ${this.marca} ${this.modello} ${this.anno}`;
+    //CARICO MASSIMO
+    carica(kg) {
+        if (this.caricoAttuale + kg <= this.caricoMassimo) {
+            this.caricoAttuale += kg;
+            console.log(`Caricati ${kg} kg sul camion. Carico attuale ${this.caricoAttuale}`);
+        } else {
+            console.log(`Impossibile caricare ${kg} kg. Supera il carico massimo di ${this.caricoMassimo}`);
+        }
     }
 }
 
@@ -176,5 +187,10 @@ miaAuto.chilometraggio = 20;
 console.log(miaAuto.mostraChilometraggio());
 
 //CAMION
-const mioCamion = new Camion("Iveco", "Boh", 2022);
+const mioCamion = new Camion("Iveco", "Boh", 2022, 3000);
 console.log(miaAuto.descrizione);
+
+//CARICO MASSIMO
+mioCamion.carica(2500);
+mioCamion.carica(600);
+console.log(mioCamion.descrizione);
