@@ -76,6 +76,15 @@ class Automobile {
     get chilometraggioAttuale() {
         return this.chilometraggio;
     }
+
+    //SETTER
+    set chilometraggio(val) {
+        if (val >= this.chilometraggio) {
+            this.chilometraggio = val;
+        } else {
+            console.log("Inserire un nuovo valore maggiore del valore corente");
+        }
+    }
 }
 
 //SOTTOCLASSE ELETTRICA
@@ -151,3 +160,8 @@ console.log(miaAuto.mostraContatoreChiamate());
 
 //GETTER
 console.log(`Chilometraggio attuale: ${miaAuto.chilometraggioAttuale} km`);
+
+//SETTER
+console.log("Impostato chilometraggio a 20 km:");
+miaAuto.chilometraggio = 20;
+console.log(miaAuto.mostraChilometraggio());
