@@ -19,13 +19,11 @@ class Automobile {
     }
     destrizione() {
         this.#contatoreChiamate;
-        return `Automobile: ${this.marca} ${this.modello} ${this.anno}`;
-        return `Automobile: ${this.marca} ${this.modello} ${this.anno} ${this.autonomia}`;
+        return `Automobile: ${this.marca} ${this.modello} ${this.anno}.` `Automobile: ${this.marca} ${this.modello} ${this.anno} ${this.autonomia}`;
     }
 
     //AGGIUNGI METODI & PROPRIETA'
     aggiungiChilometri(km) {
-        this.#contatoreChiamate;
         if (km > 0) {
             this.chilometraggio += km;
         } else {
@@ -33,7 +31,6 @@ class Automobile {
         }
     }
     mostraChilometraggio() {
-        this.#contatoreChiamate;
         return `Automobile: ${this.chilometraggio} km`;
     }
 
@@ -43,7 +40,6 @@ class Automobile {
         return annoOggi - this.anno;
     }
     mostraEta() {
-        this.#contatoreChiamate;
         return `età dell'auto: ${this.#calcolaEta()}`;
     }
 
@@ -56,8 +52,6 @@ class Automobile {
 
     //CONFRONTA KM
     static confrontaChilometraggio(auto1, auto2) {
-        auto1.#contatoreChiamate;
-        auto2.#contatoreChiamate;
         if (auto1.chilometraggio > auto2.chilometraggio) {
             return `La ${auto1.marca} ${auto1.modello} ha il chilometraggio maggiore`;
         } else if (auto1.chilometraggio < auto2.chilometraggio) {
@@ -71,9 +65,6 @@ class Automobile {
     #incrementaChiamate() {
         this.#contatoreChiamate++;
     }
-    totChiamate() {
-        return `Numeri di chiamate effettuate ai metodi sono: ${this.#contatoreChiamate}`;
-    }
 
 }
 
@@ -81,7 +72,6 @@ class Automobile {
 class Elettrica extends Automobile {
     autonomia = 0;
 
-    #contatoreChiamate;
 
     constructor(marca, modello, anno, autonomia) {
         super(marca, modello, anno);
@@ -89,7 +79,6 @@ class Elettrica extends Automobile {
     }
 
     ricarica(km) {
-        this.#contatoreChiamate;
         if (km > 0) {
             this.autonomia += km;
         } else {
@@ -143,7 +132,3 @@ auto1.aggiungiChilometri(300000);
 auto2.aggiungiChilometri(200000);
 console.log(Automobile.confrontaChilometraggio(auto1, auto2));
 
-//CONTATORE
-console.log(auto1);
-console.log(auto2);
-console.log(autoElettrica);
