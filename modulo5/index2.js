@@ -18,19 +18,21 @@ class Automobile {
         this.#contatoreChiamate = 0;
     }
     destrizione() {
-        this.#contatoreChiamate;
-        return `Automobile: ${this.marca} ${this.modello} ${this.anno}.` `Automobile: ${this.marca} ${this.modello} ${this.anno} ${this.autonomia}`;
+        //this.#contatoreChiamate;
+        return `Automobile: ${this.marca} ${this.modello} ${this.anno}.`;
     }
 
     //AGGIUNGI METODI & PROPRIETA'
     aggiungiChilometri(km) {
         if (km > 0) {
             this.chilometraggio += km;
+            //this.#contatoreChiamate();
         } else {
             console.log("Inserire valore positivo");
         }
     }
     mostraChilometraggio() {
+        //this.#incrementaChiamate();
         return `Automobile: ${this.chilometraggio} km`;
     }
 
@@ -40,11 +42,13 @@ class Automobile {
         return annoOggi - this.anno;
     }
     mostraEta() {
+        //this.#incrementaChiamate();
         return `età dell'auto: ${this.#calcolaEta()}`;
     }
 
     //METODO PROTEtTO
     protetto_controllaChilometri() {
+        //this.#incrementaChiamate();
         if (this.chilometraggio > 100000) {
             console.log("Superato limite di chilometraggio");
         }
@@ -61,9 +65,14 @@ class Automobile {
         }
     }
 
-    //CONTATORE
+    //INCREMENTA CONTATORE
     #incrementaChiamate() {
         this.#contatoreChiamate++;
+    }
+
+    //
+    totContatoreChiamate() {
+        //this.#incrementaChiamate();
     }
 
 }
@@ -76,6 +85,10 @@ class Elettrica extends Automobile {
     constructor(marca, modello, anno, autonomia) {
         super(marca, modello, anno);
         this.autonomia = autonomia;
+    }
+
+    destrizione() {
+        return `Automobile: ${this.marca} ${this.modello} ${this.anno} ${this.autonomia}`;
     }
 
     ricarica(km) {
@@ -132,3 +145,5 @@ auto1.aggiungiChilometri(300000);
 auto2.aggiungiChilometri(200000);
 console.log(Automobile.confrontaChilometraggio(auto1, auto2));
 
+//
+console.log(`Contatore chiamate: ${miaAuto.totContatoreChiamate()}`);
