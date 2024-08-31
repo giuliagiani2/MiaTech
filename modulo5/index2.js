@@ -17,7 +17,7 @@ class Automobile {
         this.chilometraggio = chilometraggio;
         this.#contatoreChiamate = 0;
     }
-    destrizione() {
+    descrizione() {
         //this.#contatoreChiamate;
         return `Automobile: ${this.marca} ${this.modello} ${this.anno}.`;
     }
@@ -67,6 +67,10 @@ class Automobile {
         this.#contatoreChiamate++;
     }
 
+    //MOSTRA CONTATORE
+    mostraContatoreChiamate() {
+        return `Numero di chiamate di aggiungiChilometri: ${this.#contatoreChiamate}`;
+    }
 }
 
 //SOTTOCLASSE ELETTRICA
@@ -79,7 +83,7 @@ class Elettrica extends Automobile {
         this.autonomia = autonomia;
     }
 
-    destrizione() {
+    descrizione() {
         return `Automobile: ${this.marca} ${this.modello} ${this.anno} ${this.autonomia}`;
     }
 
@@ -108,7 +112,7 @@ Automobile.prototype.saluta = function () {
 
 //AUTOMOBILE
 const miaAuto = new Automobile("Opel", "Corsa", 2022);
-console.log(miaAuto.destrizione);
+console.log(miaAuto.descrizione);
 
 //AGGIUNGI METODI & PROPRIETA'
 miaAuto.aggiungiChilometri(10);
@@ -116,7 +120,7 @@ console.log(miaAuto.mostraChilometraggio());
 
 //SOTTOCLASSE ELETTRICA
 const autoElettrica = new Automobile("Tesla", "Model 2", 2023, 550);
-console.log(autoElettrica.destrizione());
+console.log(autoElettrica.descrizione());
 
 //SALUTA
 console.log(autoElettrica.saluta);
