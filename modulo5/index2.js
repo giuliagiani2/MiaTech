@@ -71,6 +71,11 @@ class Automobile {
     mostraContatoreChiamate() {
         return `Numero di chiamate di aggiungiChilometri: ${this.#contatoreChiamate}`;
     }
+
+    //GETTER
+    get chilometraggioAttuale() {
+        return this.chilometraggio;
+    }
 }
 
 //SOTTOCLASSE ELETTRICA
@@ -141,3 +146,8 @@ auto1.aggiungiChilometri(300000);
 auto2.aggiungiChilometri(200000);
 console.log(Automobile.confrontaChilometraggio(auto1, auto2));
 
+//MOSTRA CONTATORE
+console.log(miaAuto.mostraContatoreChiamate());
+
+//GETTER
+console.log(`Chilometraggio attuale: ${miaAuto.chilometraggioAttuale} km`);
