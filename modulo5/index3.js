@@ -29,3 +29,20 @@ console.log("Nome: " + primoNome);
 console.log("Cognome: " + nomeDiFamiglia);
 console.log("Email: " + casellaPostale);
 console.log("Età: " + numero);
+
+
+//DESTRUCTURING CON VALORI PREDEFINITI
+const object2 = {
+    colore: "rosso",
+    pianeta: "marte",
+    //verdura: "",
+    frutta: "mela",
+    //paesaggio: ""
+}
+
+let { colore, pianeta, verdura = "pomodoro", frutta, paesaggio = "deserto" } = object2;
+console.log("Colore: " + colore);
+console.log("Pianeta: " + pianeta);
+console.log("Verdura: " + verdura);
+console.log("Frutta: " + frutta);
+console.log("Paesaggio: " + paesaggio);
