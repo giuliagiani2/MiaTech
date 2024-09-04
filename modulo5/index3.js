@@ -16,7 +16,7 @@ console.log("quarta lettera: " + quarto);
 console.log("altre lettere: " + altro);
 
 
-//ESTRAZIONE DI PROPRIETA' BASE, DESTRUCTURING CON VALORI PREDEFINITI
+//ESTRAZIONE DI PROPRIETA' BASE, DESTRUCTURING CON NOMI DI VARIABILI DIVERSE
 const object = {
     nome: "Pippo",
     cognome: "Qwerty",
