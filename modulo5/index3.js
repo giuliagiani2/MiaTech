@@ -14,3 +14,18 @@ console.log("seconda lettera: " + secondo);
 console.log("terza lettera: " + terzo);
 console.log("quarta lettera: " + quarto);
 console.log("altre lettere: " + altro);
+
+
+//ESTRAZIONE DI PROPRIETA' BASE
+const object = {
+    nome: "Pippo",
+    cognome: "Qwerty",
+    email: "querty.pippo@gmail.com",
+    eta: 40
+}
+
+let { nome, cognome, email, eta } = object;
+console.log("Nome: " + nome);
+console.log("Cognome: " + cognome);
+console.log("Email: " + email);
+console.log("Età: " + eta);
