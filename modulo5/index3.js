@@ -16,7 +16,7 @@ console.log("quarta lettera: " + quarto);
 console.log("altre lettere: " + altro);
 
 
-//ESTRAZIONE DI PROPRIETA' BASE
+//ESTRAZIONE DI PROPRIETA' BASE, DESTRUCTURING CON VALORI PREDEFINITI
 const object = {
     nome: "Pippo",
     cognome: "Qwerty",
@@ -24,8 +24,8 @@ const object = {
     eta: 40
 }
 
-let { nome, cognome, email, eta } = object;
-console.log("Nome: " + nome);
-console.log("Cognome: " + cognome);
-console.log("Email: " + email);
-console.log("Età: " + eta);
+let { nome: primoNome, cognome: nomeDiFamiglia, email: casellaPostale, eta: numero } = object;
+console.log("Nome: " + primoNome);
+console.log("Cognome: " + nomeDiFamiglia);
+console.log("Email: " + casellaPostale);
+console.log("Età: " + numero);
