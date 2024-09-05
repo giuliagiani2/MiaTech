@@ -58,3 +58,11 @@ console.log("Array copia" + numbersSpread);
 numbers = [20, 25];
 console.log(numbers);
 console.log(...numbersSpread);
+
+
+//UNIONE DI DUE ARRAY
+const values1 = [1, 2, 3, 4, 5];
+const values2 = [6, 7, 8, 9, 10];
+const valuesTotal = [...values1, ...values2];
+
+console.log(valuesTotal);
