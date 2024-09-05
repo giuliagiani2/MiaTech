@@ -78,3 +78,18 @@ casaSpread = { ...casa, mq: 100 };
 
 console.log("Originale: " + casa);
 console.log("Copia con una nuova proprietà" + casaSpread);
+
+
+//FUNZIONI CON PARAMETRI VARIABILI
+function somma(...numeri) {
+    return numeri.reduce((acc, curr) => {
+        return acc + curr;
+    }, 0);
+}
+const ris1 = somma(1, 2, 3);
+const ris2 = somma(10);
+const ris3 = somma();
+
+console.log("Risultato 1: " + ris1);
+console.log("Risultato 2: " + ris2);
+console.log("Risultato 3: " + ris3);
