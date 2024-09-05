@@ -66,3 +66,15 @@ const values2 = [6, 7, 8, 9, 10];
 const valuesTotal = [...values1, ...values2];
 
 console.log(valuesTotal);
+
+
+//COPIA DI UN OGGETTO CON PROPRIETA' AGGIUNTIVE
+const casa = {
+    tipo: "Villa",
+    via: "Via Roma",
+    numero: 120
+};
+casaSpread = { ...casa, mq: 100 };
+
+console.log("Originale: " + casa);
+console.log("Copia con una nuova proprietà" + casaSpread);
