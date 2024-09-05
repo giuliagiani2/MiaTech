@@ -93,3 +93,12 @@ const ris3 = somma();
 console.log("Risultato 1: " + ris1);
 console.log("Risultato 2: " + ris2);
 console.log("Risultato 3: " + ris3);
+
+
+//DESTRUCTURING ARRAY CON REST OPERATOR
+const numbers2 = [10, 20, 30, 40, 50];
+const [num1, num2, ...otherNum] = numbers2;
+
+console.log("Primo numero: " + num1);
+console.log("Secondo numero: " + num2);
+console.log("Altri numeri: " + otherNum);
