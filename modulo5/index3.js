@@ -46,3 +46,15 @@ console.log("Pianeta: " + pianeta);
 console.log("Verdura: " + verdura);
 console.log("Frutta: " + frutta);
 console.log("Paesaggio: " + paesaggio);
+
+
+//COPIA UN ARRAY
+const numbers = [11, 12, 13, 14, 15];
+const numbersSpread = [...numbers];
+
+console.log("Array originale" + numbers);
+console.log("Array copia" + numbersSpread);
+
+numbers = [20, 25];
+console.log(numbers);
+console.log(...numbersSpread);
