@@ -102,3 +102,16 @@ const [num1, num2, ...otherNum] = numbers2;
 console.log("Primo numero: " + num1);
 console.log("Secondo numero: " + num2);
 console.log("Altri numeri: " + otherNum);
+
+
+//DESTRUCTURING PGGETTO CON REST OPERATOR
+const obj = {
+    prop1: "ciao",
+    prop2: 1,
+    prop3: "utente",
+    prop4: 2
+}
+const { prop1, prop3, ...otherProp } = obj;
+console.log("Prima proprietà" + prop1);
+console.log("Terza proprietà" + prop3);
+console.log("Altre proprietà" + otherProp);
