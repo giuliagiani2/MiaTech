@@ -150,3 +150,13 @@ const cognome = "Wood";
 const nomeCompleto = `Ciao sono ${nome} ${cognome}`;
 
 console.log("Frase completa:  " + nomeCompleto);
+
+
+//STRINGA MULTILINEA CON TEMPLATE LITERALS
+const name1 = "Simone";
+const surname = "Costa";
+const age = 30;
+const city = "Roma";
+const stringMultilinea = `Ciao sono ${name1} ${surname} ${age} anni e vivo a ${city}.`;
+
+console.log(stringMultilinea);
