@@ -126,3 +126,10 @@ const obj2 = {
 const daOggettoAStringa = JSON.stringify(obj2);
 
 console.log(daOggettoAStringa);
+
+
+//CONVERSIONE DI UNA STRINGA JSON IN UN OGGETTO
+const string = `{"primo":"ciao", "secondo":"come", "terzo":"stai"}`;
+const daStringaAdOggetto = JSON.parse(string);
+
+console.log(daStringaAdOggetto);
