@@ -115,3 +115,14 @@ const { prop1, prop3, ...otherProp } = obj;
 console.log("Prima proprietà" + prop1);
 console.log("Terza proprietà" + prop3);
 console.log("Altre proprietà" + otherProp);
+
+
+//CONVERSIONE DI UN OGGETTO IN UNA STRINGA JSON
+const obj2 = {
+    prop5: "a",
+    prop6: 0,
+    prop7: "b"
+};
+const daOggettoAStringa = JSON.stringify(obj2);
+
+console.log(daOggettoAStringa);
