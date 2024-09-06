@@ -142,3 +142,11 @@ personeArray.push({ nome: "maria", cognome: "rossi", eta: 14 });
 const personeArrayConvert = JSON.stringify(personeArray);
 
 console.log(personeArrayConvert);
+
+
+//STRINGA SEMPLICE CON TEMPLATE LITERALS
+const nome = "John";
+const cognome = "Wood";
+const nomeCompleto = `Ciao sono ${nome} ${cognome}`;
+
+console.log("Frase completa:  " + nomeCompleto);
