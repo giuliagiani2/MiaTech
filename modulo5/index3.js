@@ -136,12 +136,12 @@ console.log(daStringaAdOggetto);
 
 
 //MANIPOLAZIONE DI DATI JSON
-/*const persone = `[{"nome":"giulia", "cognome":"giani", "eta":20},{"nome":"alberto", "cognome":porta"", eta:45}]`;
+const persone = `[{"nome":"giulia", "cognome":"giani", "eta":20},{"nome":"alberto", "cognome":porta"", eta:45}]`;
 const personeArray = JSON.parse(persone);
 personeArray.push({ nome: "maria", cognome: "rossi", eta: 14 });
 const personeArrayConvert = JSON.stringify(personeArray);
 
-console.log(personeArrayConvert);*/
+console.log(personeArrayConvert);
 
 
 //STRINGA SEMPLICE CON TEMPLATE LITERALS
@@ -175,3 +175,19 @@ const oggettoPersona = {
 
 const risultato = funzionePersona(oggettoPersona);
 console.log(risultato);
+
+
+//UTILIZZARE CONSOLE.LOG
+const num4 = 10;
+const string1 = "nome";
+const array3 = [1, 2, 3, 4, 5];
+const oggetto = {
+    prop1: "proprietà 1",
+    prop2: "proprietà 2",
+    prop3: 0
+};
+
+console.log("Numero: ", num4);
+console.log("stringa: ", string1);
+console.log("array: ", array3);
+console.log("oggetto: ", oggetto.prop2);
