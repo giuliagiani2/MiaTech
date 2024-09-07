@@ -212,3 +212,11 @@ console.group();
 console.log("Ciao");
 console.log("mondo");
 console.log("!");
+
+
+//UTILIZZARE SETTIMEOUT
+function messaggio() {
+    console.log("Sono passati 3 secondi ...");
+}
+
+setTimeout(messaggio, 3000);
