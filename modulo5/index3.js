@@ -203,3 +203,12 @@ if (var1 == 1) {
 } else {
     console.log("Il valore inserito è buono");
 }
+
+
+//UTILIZZARE CONSOLE.TABLE E CONSOLE.GROUP
+console.table(["Audi", "BMW", "Fiat"]);
+
+console.group();
+console.log("Ciao");
+console.log("mondo");
+console.log("!");
