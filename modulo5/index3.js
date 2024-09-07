@@ -191,3 +191,15 @@ console.log("Numero: ", num4);
 console.log("stringa: ", string1);
 console.log("array: ", array3);
 console.log("oggetto: ", oggetto.prop2);
+
+
+//UTILIZZARE CONSOLE.ERROR E CONSOLE.WARN
+const var1 = 1;
+
+if (var1 == 1) {
+    console.error("Verificato errore");
+} else if (var1 == 2) {
+    console.warn("Valore già presente");
+} else {
+    console.log("Il valore inserito è buono");
+}
