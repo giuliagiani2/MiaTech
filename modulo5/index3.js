@@ -49,7 +49,7 @@ console.log("Paesaggio: " + paesaggio);
 
 
 //COPIA UN ARRAY
-const numbers = [11, 12, 13, 14, 15];
+let numbers = [11, 12, 13, 14, 15];
 const numbersSpread = [...numbers];
 
 console.log("Array originale" + numbers);
@@ -136,12 +136,12 @@ console.log(daStringaAdOggetto);
 
 
 //MANIPOLAZIONE DI DATI JSON
-const persone = `[{"nome":"giulia", "cognome":"giani", "eta":20},{"nome":"alberto", "cognome":porta"", eta:45}]`;
+/*const persone = `[{"nome":"giulia", "cognome":"giani", "eta":20},{"nome":"alberto", "cognome":porta"", eta:45}]`;
 const personeArray = JSON.parse(persone);
 personeArray.push({ nome: "maria", cognome: "rossi", eta: 14 });
 const personeArrayConvert = JSON.stringify(personeArray);
 
-console.log(personeArrayConvert);
+console.log(personeArrayConvert);*/
 
 
 //STRINGA SEMPLICE CON TEMPLATE LITERALS
@@ -160,3 +160,18 @@ const city = "Roma";
 const stringMultilinea = `Ciao sono ${name1} ${surname} ${age} anni e vivo a ${city}.`;
 
 console.log(stringMultilinea);
+
+
+//FUNZIONE E TEMPLATE LITERALS
+function funzionePersona(per) {
+    return `nome:  ${per.nome}  città:  ${per.citta}  età:  ${per.eta}`;
+}
+
+const oggettoPersona = {
+    nome: "Leo",
+    citta: "Venezia",
+    eta: 20
+}
+
+const risultato = funzionePersona(oggettoPersona);
+console.log(risultato);
