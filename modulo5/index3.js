@@ -227,3 +227,15 @@ function messaggio1() {
     console.log("Sono passati 2 secondi");
 }
 setInterval(messaggio1, 2000);
+
+
+//INTERROMPERE SETINTERVAL CON CLEARINTERVAL
+function stampaMessaggio() {
+    console.log("è passato un secondo ...");
+}
+
+const intervallo = setInterval(stampaMessaggio, 1000);
+setTimeout(function () {
+    clearInterval(intervallo);
+    console.log("interrotto intervallo!");
+}, 5000)
