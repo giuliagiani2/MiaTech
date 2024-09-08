@@ -254,3 +254,18 @@ try {
 } catch (error) {
     console.log(error);
 }
+
+
+//GESTIONE DI PIU' TIPI DI ERRORI
+try {
+    const stringa = "Ciao mondo";
+    if (stringa !== 'string') {
+        console.log("Non è una stringa");
+    } else if (stringa.length === 7) {
+        console.log("La stringa è lunga 7 caratteri");
+    } else {
+        console.log(`La stringa è lunga ${stringa.length} caratteri`);
+    }
+} catch (error) {
+    console.log(error);
+}
