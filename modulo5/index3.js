@@ -269,3 +269,21 @@ try {
 } catch (error) {
     console.log(error);
 }
+
+
+//USO DI FINALLY PER ESEGUIRE CODICE INDIPENDENTEMENTE DAL RISULTATO
+try {
+    const diminuendo = 2;
+    const sottraendo = 5;
+    let differenza = 0;
+
+    differenza = diminuendo - sottraendo;
+    if (differenza <= 0) {
+        console.log("Attenzione risultato sotto lo zero");
+    }
+} catch (error) {
+    console.log(error);
+}
+finally {
+    console.log("perazione completata");
+}
