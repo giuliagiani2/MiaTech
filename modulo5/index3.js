@@ -239,3 +239,18 @@ setTimeout(function () {
     clearInterval(intervallo);
     console.log("interrotto intervallo!");
 }, 5000)
+
+
+//GESTIONE DI UN ERRORE SEMPLICE
+try {
+    const firstNumber = 10;
+    const secondNumber = 0;
+
+    if (firstNumber === 0 || secondNumber === 0) {
+        console.log("Impossibile dividere un numero per 0");
+    }
+    const risultato = firstNumber / secondNumber;
+    console.log("Risultato della divisione", risultato);
+} catch (error) {
+    console.log(error);
+}
