@@ -220,3 +220,10 @@ function messaggio() {
 }
 
 setTimeout(messaggio, 3000);
+
+
+//UTILIZZARE SETINTERVAL
+function messaggio1() {
+    console.log("Sono passati 2 secondi");
+}
+setInterval(messaggio1, 2000);
