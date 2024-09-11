@@ -43,3 +43,17 @@ function risultatoFinale(risultato2) {
 funzioneUno(2, 3, function (risultato1) {
     funzioneDue(risultato1, 2, risultatoFinale);
 })
+
+
+//CREARE UNA PROMESSA SEMPLICE
+function promessaSemplice() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("La promessa è stata risolta dopo 2 secondi!");
+        }, 2000);
+    });
+}
+promessaSemplice()
+    .then((messaggio) => {
+        console.log(messaggio);
+    });
