@@ -45,15 +45,22 @@ funzioneUno(2, 3, function (risultato1) {
 })
 
 
-//CREARE UNA PROMESSA SEMPLICE
-function promessaSemplice() {
-    return new Promise((resolve) => {
+//CREARE UNA PROMESSA SEMPLICE, GESTIONE DI UNA PROMESSA CON CATCH
+function promessaSemplice(condizione) {
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve("La promessa è stata risolta dopo 2 secondi!");
+            if (condizione) {
+                resolve("La promessa è stata risolta dopo 2 secondi!");
+            } else {
+                reject("La promessa è stata rifiutata");
+            }
         }, 2000);
     });
 }
-promessaSemplice()
+promessaSemplice(true)
     .then((messaggio) => {
         console.log(messaggio);
-    });
+    })
+    .catch((errore) => {
+        console.error(errore);
+    })
