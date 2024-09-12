@@ -119,3 +119,23 @@ sommaEProdotto()
     .catch((error) => {
         console.log(error);
     })
+
+
+//CATENA DI PROMESSE CON CONDIZIONI
+function verificaNumero() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(4);
+        }, 3000);
+    })
+}
+verificaNumero()
+    .then((valore) => {
+        if (valore % 2 == 0) {
+            console.log("Il numero inserito è pari.");
+            return valore * 2;
+        } else {
+            console.log("Il numero inserito è dispari.");
+            return valore + 1;
+        }
+    })
