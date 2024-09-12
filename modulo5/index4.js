@@ -164,3 +164,15 @@ gestioneErrori()
     .catch((error) => {
         console.log(error);
     })
+
+
+//GESTIONE DEGLI ERRORI CON CATCH
+function promessaRifiutata() {
+    return new Promise((resolve, reject) => {
+        reject("Promessa rifiutata");
+    });
+}
+promessaRifiutata()
+    .catch((error) => {
+        console.error(error);
+    })
