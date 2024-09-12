@@ -139,3 +139,28 @@ verificaNumero()
             return valore + 1;
         }
     })
+
+
+//CATENA DI PROMESSE CON GESTIONE DEGLI ERRORI
+function gestioneErrori() {
+    return new Promise((resolve, reject) => {
+        const valoreCasuale = Math.floor(Math.random() * 9);
+        if (valoreCasuale > 5) {
+            resolve(valoreCasuale);
+        } else {
+            reject("Errore!!!");
+        }
+    });
+}
+gestioneErrori()
+    .then((risultato) => {
+        console.log("Promessa risolta", risultato);
+        const risultatoManipolato = risultato * 3;
+        return risultatoManipolato;
+    })
+    .then((risultatoFinale) => {
+        console.log("Risultato dopo la manipolazione: ", risultatoFinale);
+    })
+    .catch((error) => {
+        console.log(error);
+    })
