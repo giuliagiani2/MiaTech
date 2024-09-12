@@ -77,17 +77,45 @@ function promiseFinally(successivo) {
             }
         }, 1000);
     })
-        .then((messaggio) => {
-            console.log(messaggio);
-        })
-        .catch((error) => {
-            console.log(error);
-        })
-        .finally(() => {
-            console.log("Operazione eseguita indipendentemente dal risultato");
-        })
 }
+promiseFinally()
+    .then((messaggio) => {
+        console.log(messaggio);
+    })
+    .catch((error) => {
+        console.log(error);
+    })
+    .finally(() => {
+        console.log("Operazione eseguita indipendentemente dal risultato");
+    })
+
 //Se è vera
 promiseFinally(true);
 //Se è falsa
 promiseFinally(false);
+
+
+//CATENA DI PROMESSE SEMPLICI
+function sommaEProdotto() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(5);
+        }, 3000);
+    });
+}
+sommaEProdotto()
+    .then((valore) => {
+        let prodotto = 0;
+        prodotto = valore * 2;
+        console.log("Risultato: ", prodotto);
+        return prodotto;
+    })
+    .then((prodotto) => {
+        let somma = 0;
+        somma = prodotto + 3;
+        console.log("Risultato: ", somma);
+        return somma;
+    })
+    .catch((error) => {
+        console.log(error);
+    })
