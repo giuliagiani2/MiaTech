@@ -64,3 +64,30 @@ promessaSemplice(true)
     .catch((errore) => {
         console.error(errore);
     })
+
+
+//PROMESSA CON FINALLY
+function promiseFinally(successivo) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (successivo) {
+                resolve("Operazione completata!");
+            } else {
+                reject("Verificato errore durante l'operazione");
+            }
+        }, 1000);
+    })
+        .then((messaggio) => {
+            console.log(messaggio);
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+        .finally(() => {
+            console.log("Operazione eseguita indipendentemente dal risultato");
+        })
+}
+//Se è vera
+promiseFinally(true);
+//Se è falsa
+promiseFinally(false);
