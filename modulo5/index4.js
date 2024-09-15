@@ -229,3 +229,27 @@ promessaCasuale()
     .catch((error) => {
         console.log(error);
     })
+
+
+//UTILIZZARE PROMISE.ALL
+function promessa1() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Risultato prima promise");
+        }, 5000);
+    });
+}
+function promessa2() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Risultato seconda promise");
+        }, 6000);
+    });
+}
+Promise.all([promessa1(), promessa2()])
+    .then((results) => {
+        console.log("Risolte entrambe le promesse: ", results);
+    })
+    .catch((error) => {
+        console.log(error);
+    })
