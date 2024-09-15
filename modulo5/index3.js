@@ -8,12 +8,13 @@ console.log("Valore 3: " + valore3);
 
 //DESTRUCTURING CON VALORI PREDEFINITI
 const array2 = ["a", "b", "c", "d"];
-let [primo, secondo, terzo, quarto, altro] = array2;
+let [primo = "valore uno default", secondo = "valore due default", terzo = "valore tre default",
+    quarto = "valore quattro default", quinto = "valore cinque default"] = array2;
 console.log("prima lettera: " + primo);
 console.log("seconda lettera: " + secondo);
 console.log("terza lettera: " + terzo);
 console.log("quarta lettera: " + quarto);
-console.log("altre lettere: " + altro);
+console.log("altre lettere: " + quinto);
 
 
 //ESTRAZIONE DI PROPRIETA' BASE, DESTRUCTURING CON NOMI DI VARIABILI DIVERSE
@@ -104,7 +105,7 @@ console.log("Secondo numero: " + num2);
 console.log("Altri numeri: " + otherNum);
 
 
-//DESTRUCTURING PGGETTO CON REST OPERATOR
+//DESTRUCTURING OGGETTO CON REST OPERATOR
 const obj = {
     prop1: "ciao",
     prop2: 1,
