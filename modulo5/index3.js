@@ -247,7 +247,7 @@ try {
     const secondNumber = 0;
 
     if (firstNumber === 0 || secondNumber === 0) {
-        console.log("Impossibile dividere un numero per 0");
+        throw new Error("Impossibile dividere un numero per 0");
     }
     const risultato = firstNumber / secondNumber;
     console.log("Risultato della divisione", risultato);
@@ -259,15 +259,21 @@ try {
 //GESTIONE DI PIU' TIPI DI ERRORI
 try {
     const stringa = "Ciao mondo";
-    if (stringa !== 'string') {
-        console.log("Non è una stringa");
+    if (typeof stringa !== 'string') {
+        throw new Error("Non è una stringa");
     } else if (stringa.length === 7) {
         console.log("La stringa è lunga 7 caratteri");
     } else {
-        console.log(`La stringa è lunga ${stringa.length} caratteri`);
+        throw new Error(`La stringa è lunga ${stringa.length} caratteri`);
     }
 } catch (error) {
-    console.log(error);
+    if (error instanceof TypeError) {
+        console.log(error);
+    } else if (error instanceof RangeError) {
+        console.log(error);
+    } else {
+        console.log(error);
+    }
 }
 
 
