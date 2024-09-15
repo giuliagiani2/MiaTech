@@ -176,3 +176,31 @@ promessaRifiutata()
     .catch((error) => {
         console.error(error);
     })
+
+
+//GESTIONE DEGLI ERRORI CON THEN E CATCH
+function promessaBooleana(bool) {
+    return new Promise((resolve, reject) => {
+        if (bool) {
+            resolve("Promessa accettata");
+        } else {
+            reject("Promessa rifiutata");
+        }
+    });
+}
+//Se è vero
+promessaBooleana(true)
+    .then((valore) => {
+        console.log(valore)
+    })
+    .catch((error) => {
+        console.log(error);
+    })
+//Se è falso
+promessaBooleana(false)
+    .then((valore) => {
+        console.log(valore);
+    })
+    .catch((error) => {
+        console.log(error);
+    })
