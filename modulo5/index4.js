@@ -397,3 +397,37 @@ function fetchData() {
         })
 }
 fetchData();
+
+
+//ESEGUIRE UNA RICHIESTA POST
+function fetchDataPost() {
+    const url = "https://jsonplaceholder.typicode.com/posts";
+    const data = {
+        title: "Title",
+        body: "Body",
+        userId: 1
+    };
+    fetch(url, {
+        method: "POST",
+        headers: {
+            "Contenuto": "apllicazione/json"
+        },
+        body: JSON.stringify(data)
+    })
+        .then((response2) => {
+            if (!response2.ok) {
+                console.log("Errore");
+                return null;
+            }
+            return response2.json();
+        })
+        .then((data2) => {
+            if (data2) {
+                console.log(data2);
+            }
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+}
+fetchDataPost();
