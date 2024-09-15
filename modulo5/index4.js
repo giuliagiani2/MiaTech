@@ -449,3 +449,24 @@ async function fetchDataGet() {
         console.log(error);
     }
 }
+fetchDataGet();
+
+
+//COMPRENDERE UN ERRORE CORS
+const url2 = "http://example.com";
+function corsNonSupportato() {
+    fetch(url2)
+        .then((response4) => {
+            if (!response4.ok) {
+                throw new Error("Errore");
+            }
+            return response4.json();
+        })
+        .then((data4) => {
+            console.log(data4);
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+}
+corsNonSupportato();
