@@ -212,6 +212,7 @@ console.group();
 console.log("Ciao");
 console.log("mondo");
 console.log("!");
+console.groupEnd();
 
 
 //UTILIZZARE SETTIMEOUT
