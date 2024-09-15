@@ -204,3 +204,28 @@ promessaBooleana(false)
     .catch((error) => {
         console.log(error);
     })
+
+
+//GESTIONE DEGLI ERRORI IN UNA CATENA DI PROMESSE
+function promessaCasuale() {
+    return new Promise((resolve, reject) => {
+        const valoreCasuale = Math.random();
+        if (valoreCasuale > 0.5) {
+            resolve("Promessa risolta");
+        } else {
+            reject("Promessa bloccata per errori");
+        }
+    });
+}
+promessaCasuale()
+    .then((valore1) => {
+        console.log(`Il valore ${valore1} è buono`);
+        return promessaCasuale();
+    })
+    .then((valore1) => {
+        let somma = valore1 + 3;
+        console.log(`La somma di ${somma} è buono`);
+    })
+    .catch((error) => {
+        console.log(error);
+    })
