@@ -277,3 +277,33 @@ Promise.race([promessa1(), promessa2()])
     .catch((error) => {
         console.log(error);
     })
+
+
+//UTILIZZARE PROMISE.ALLSETTLED
+function promessa1() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Risultato prima promessa");
+        }, 1000);
+    });
+}
+function promessa2() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject("Seconda promsessa rifiutata");
+        }, 1500);
+    });
+}
+function promessa3() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Risultato terza promessa");
+        }, 1000);
+    });
+}
+Promise.allSettled([promessa1(), promessa2(), promessa3()])
+    .then((risultati) => {
+        risultati.forEach((risultati, index) => {
+            console.log(risultati, index);
+        });
+    })
