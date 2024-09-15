@@ -373,3 +373,27 @@ async function terzaFunzioneAsync() {
     }
 }
 terzaFunzioneAsync();
+
+
+//ESEGUIRE UNA RICHIESTA GET SEMPLICE
+function fetchData() {
+    const url = "";
+    fetch(url, {
+        method: "GET"
+    })
+        .then((response) => {
+            if (!response.ok) {
+                console.log("Errore");
+            }
+            return response.json();
+        })
+        .then((data) => {
+            if (data) {
+                console.log(data);
+            }
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+}
+fetchData();
