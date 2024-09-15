@@ -307,3 +307,18 @@ Promise.allSettled([promessa1(), promessa2(), promessa3()])
             console.log(risultati, index);
         });
     })
+
+
+//FUNZIONE SEMPLICE ASINCRONA
+function promessaPrincipale() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Promessa eseguita dopo 2 secondi");
+        }, 2000);
+    });
+}
+async function funzioneAsincrona() {
+    let ris = await promessaPrincipale();
+    console.log(ris);
+}
+funzioneAsincrona();
