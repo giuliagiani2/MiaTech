@@ -344,3 +344,32 @@ async function funzioneAsincronaBool(valore) {
 }
 funzioneAsincronaBool(true);
 funzioneAsincronaBool(false);
+
+
+//FUNZIONI ASINCRONE IN SERIE
+async function primaFunzioneAsync() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Funzione 1 risolta");
+        }, 1000);
+    });
+}
+async function secondaFunzioneAsync() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Funzione 2 risolta");
+        }, 2000);
+    });
+}
+async function terzaFunzioneAsync() {
+    try {
+        const primoRis = await primaFunzioneAsync();
+        console.log(primoRis);
+
+        const secondoRis = await secondaFunzioneAsync();
+        console.log(secondoRis);
+    } catch (error) {
+        console.log(error)
+    }
+}
+terzaFunzioneAsync();
