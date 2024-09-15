@@ -493,3 +493,22 @@ function corsUsandoProxy() {
         })
 }
 corsUsandoProxy();
+
+
+//UTILIZZARE UN'API CHE SUPPORTA CORS
+const url4 = "https://jsonplaceholder.typicode.com/posts";
+function corsSupportato() {
+    fetch(url4)
+        .then((response6) => {
+            if (!response6.ok) {
+                throw new Error("Errore");
+            }
+            return response6.json();
+        })
+        .then((data6) => {
+            console.log(data6);
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+}
