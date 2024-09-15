@@ -253,3 +253,27 @@ Promise.all([promessa1(), promessa2()])
     .catch((error) => {
         console.log(error);
     })
+
+
+//UTILIZZARE PROMISE.RACE
+function promessa1() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Prima promise");
+        }, 8000);
+    });
+}
+function promessa2() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Seconda promise");
+        }, 7000);
+    });
+}
+Promise.race([promessa1(), promessa2()])
+    .then((valori) => {
+        console.log("Promsie che si è risolta prima è: ", valori);
+    })
+    .catch((error) => {
+        console.log(error);
+    })
