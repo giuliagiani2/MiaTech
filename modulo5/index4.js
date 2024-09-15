@@ -470,3 +470,26 @@ function corsNonSupportato() {
         })
 }
 corsNonSupportato();
+
+
+//UTILIZZARE UN PROXY PER BYPASSARE CORS
+const url3 = "http://example.com";
+const proxy = "https://cors-anywhere.herokuapp.com/";
+const url3PiuProxy = `${url3}${proxy}`;
+
+function corsUsandoProxy() {
+    fetch(url3PiuProxy)
+        .then((response5) => {
+            if (!response5.ok) {
+                throw new Error("Errore");
+            }
+            return response5.json();
+        })
+        .then((data5) => {
+            console.log(data5);
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+}
+corsUsandoProxy();
