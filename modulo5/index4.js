@@ -322,3 +322,25 @@ async function funzioneAsincrona() {
     console.log(ris);
 }
 funzioneAsincrona();
+
+
+//GESTIONE DEGLI ERRORI CON TRY CATCH
+function promessa(bool) {
+    return new Promise((resolve, reject) => {
+        if (bool) {
+            resolve("Promessa risolta");
+        } else {
+            reject("Promessa rifiutata");
+        }
+    });
+}
+async function funzioneAsincronaBool(valore) {
+    try {
+        const funzione = await promessa(valore);
+        console.log(funzione);
+    } catch (error) {
+        console.log(error);
+    }
+}
+funzioneAsincronaBool(true);
+funzioneAsincronaBool(false);
