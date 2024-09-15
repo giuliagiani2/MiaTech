@@ -431,3 +431,21 @@ function fetchDataPost() {
         })
 }
 fetchDataPost();
+
+
+//GESTIONE DEGLI ERRORI CON ASYNC E AWAIT
+const url = "https://jsonplaceholder.typicode.com/posts";
+async function fetchDataGet() {
+    try {
+        const response3 = await fetch(url, {
+            method: "GET"
+        })
+        if (!response3.ok) {
+            throw new Error("Trovato errore");
+        }
+        const data3 = await response3.json();
+        console.log(data3);
+    } catch (error) {
+        console.log(error);
+    }
+}
