@@ -136,10 +136,10 @@ console.log(daStringaAdOggetto);
 
 
 //MANIPOLAZIONE DI DATI JSON
-const persone = `[{"nome":"giulia", "cognome":"giani", "eta":20},{"nome":"alberto", "cognome":porta"", eta:45}]`;
+const persone = `[{"nome":"giulia", "cognome":"giani", "eta":20}, {"nome":"alberto", "cognome":"porta", "eta":45}]`;
 const personeArray = JSON.parse(persone);
 personeArray.push({ nome: "maria", cognome: "rossi", eta: 14 });
-const personeArrayConvert = JSON.stringify(personeArray);
+const personeArrayConvert = JSON.stringify(personeArray, null, 2);
 
 console.log(personeArrayConvert);
 
