@@ -87,18 +87,18 @@ remuveValureFromSessionStorage("username");
 //per salvare i valori
 function saveValue(storage, chiave, valore) {
     storage.setItem(chiave, valore);
-    console.log(`Valore salvato in ${storage === localStorage ? 'localStorage' : 'sessionSTorage'}:${key}=${value}`);
+    console.log(`Valore salvato in ${storage === localStorage ? 'localStorage' : 'sessionSTorage'}:${chiave}=${valore}`);
 }
 //per recuperare i valori
 function recoverValue(storage, chiave) {
     const valore = storage.getItem(chiave);
-    console.log(`Valore recuperato da ${storage === localStorage ? 'localStorage' : 'sessionSTorage'}:${key}=${value}`);
+    console.log(`Valore recuperato da ${storage === localStorage ? 'localStorage' : 'sessionSTorage'}:${chiave}=${valore}`);
     return valore;
 }
 //per rimuovere il valore
 function remuveValue(storage, chiave) {
     storage.removeItem(chiave);
-    console.log(`Valore rimosso da ${storage === localStorage ? 'localStorage' : 'sessionSTorage'}:${key}`);
+    console.log(`Valore rimosso da ${storage === localStorage ? 'localStorage' : 'sessionSTorage'}:${chiave}`);
 }
 saveValue(localStorage, "nome", "Pippo");
 saveValue(sessionStorage, "cognome", "Rossi");
@@ -112,3 +112,8 @@ recoverValue(sessionStorage, "cognome");
 
 //OGGETTO DOCUMENT
 console.log("Dom della pagina ", document);
+
+
+//GETELEMENTBYID
+const titleH1 = document.getElementById('title');
+console.log(`Il mio elemento h1: ${titleH1}`);
