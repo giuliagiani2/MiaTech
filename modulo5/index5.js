@@ -117,3 +117,8 @@ console.log("Dom della pagina ", document);
 //GETELEMENTBYID
 const titleH1 = document.getElementById('title');
 console.log(`Il mio elemento h1: ${titleH1}`);
+
+
+//QUERYSELECTOR
+const titleH6 = document.querySelector('h6');
+console.log(`Il mio elemento h6: ${titleH6}`);
