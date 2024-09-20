@@ -108,3 +108,7 @@ remuveValue(localStorage, "nome");
 remuveValue(sessionStorage, "cognome");
 recoverValue(localStorage, "nome");
 recoverValue(sessionStorage, "cognome");
+
+
+//OGGETTO DOCUMENT
+console.log("Dom della pagina ", document);
