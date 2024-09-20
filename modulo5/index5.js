@@ -29,3 +29,29 @@ function deleteCookie(nome) {
 setCookies("username", "Pippo", 10);
 getCookie("username");
 deleteCookie("username");
+
+
+//UTILIZZARE IL LOCALSTORAGE
+//salvataggio nel local storage
+function saveInLocalStorage(chiave, valore) {
+    localStorage.setItem(chiave, valore);
+    console.log(`Valore salvato nel local storage: ${chiave}=${valore}`);
+}
+//recupero valore nel local storage
+function getValueFromLocalStorage(chiave) {
+    const valore = localStorage.getItem(chiave);
+    if (valore !== null) {
+        console.log(`Valore recuerato da local storage: ${chiave}=${valore}`);
+    } else {
+        console.log("Nessun valore trovato");
+    }
+    return valore;
+}
+//rimozione valore dal local storage
+function remoreValureFromLocalStorage(chiave) {
+    localStorage.removeItem(chiave);
+    console.log("Valore rimosso");
+}
+saveInLocalStorage("username", "Qwerty");
+getValueFromLocalStorage("username");
+remoreValureFromLocalStorage("username");
