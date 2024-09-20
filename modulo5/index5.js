@@ -55,3 +55,29 @@ function remoreValureFromLocalStorage(chiave) {
 saveInLocalStorage("username", "Qwerty");
 getValueFromLocalStorage("username");
 remoreValureFromLocalStorage("username");
+
+
+//UTILIZZARE IL SESSIONSTORAGE
+//salvataggio nel session storage
+function saveInSessionStorage(chiave, valore) {
+    sessionStorage.setItem(chiave, valore);
+    console.log(`Valore salvato nel session storage: ${chiave}=${valore}`);
+}
+//recupero valore nel session storage
+function getValueFromSessionStorage(chiave) {
+    const valore = sessionStorage.getItem(chiave);
+    if (valore !== null) {
+        console.log(`Valore recuperato da session storage: ${chiave}=${valore}`);
+    } else {
+        console.log("Nessun valore trovato");
+    }
+    return valore;
+}
+//rimozione valore dal session storage
+function remoreValureFromSessionStorage(chiave) {
+    sessionStorage.removeItem(chiave);
+    console.log("Valore rimosso");
+}
+saveInSessionStorage("username", "Qwerty");
+getValueFromSessionStorage("username");
+remoreValureFromSessionStorage("username");
