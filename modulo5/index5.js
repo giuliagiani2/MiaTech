@@ -48,13 +48,13 @@ function getValueFromLocalStorage(chiave) {
     return valore;
 }
 //rimozione valore dal local storage
-function remoreValureFromLocalStorage(chiave) {
+function remuveValureFromLocalStorage(chiave) {
     localStorage.removeItem(chiave);
     console.log("Valore rimosso");
 }
 saveInLocalStorage("username", "Qwerty");
 getValueFromLocalStorage("username");
-remoreValureFromLocalStorage("username");
+remuveValureFromLocalStorage("username");
 
 
 //UTILIZZARE IL SESSIONSTORAGE
@@ -74,10 +74,37 @@ function getValueFromSessionStorage(chiave) {
     return valore;
 }
 //rimozione valore dal session storage
-function remoreValureFromSessionStorage(chiave) {
+function remuveValureFromSessionStorage(chiave) {
     sessionStorage.removeItem(chiave);
     console.log("Valore rimosso");
 }
 saveInSessionStorage("username", "Qwerty");
 getValueFromSessionStorage("username");
-remoreValureFromSessionStorage("username");
+remuveValureFromSessionStorage("username");
+
+
+//UTILIZZARE LOCALSTORAGE E SESSIONSTORAGE INSIEME
+//per salvare i valori
+function saveValue(storage, chiave, valore) {
+    storage.setItem(chiave, valore);
+    console.log(`Valore salvato in ${storage === localStorage ? 'localStorage' : 'sessionSTorage'}:${key}=${value}`);
+}
+//per recuperare i valori
+function recoverValue(storage, chiave) {
+    const valore = storage.getItem(chiave);
+    console.log(`Valore recuperato da ${storage === localStorage ? 'localStorage' : 'sessionSTorage'}:${key}=${value}`);
+    return valore;
+}
+//per rimuovere il valore
+function remuveValue(storage, chiave) {
+    storage.removeItem(chiave);
+    console.log(`Valore rimosso da ${storage === localStorage ? 'localStorage' : 'sessionSTorage'}:${key}`);
+}
+saveValue(localStorage, "nome", "Pippo");
+saveValue(sessionStorage, "cognome", "Rossi");
+recoverValue(localStorage, "nome");
+recoverValue(sessionStorage, "cognome");
+remuveValue(localStorage, "nome");
+remuveValue(sessionStorage, "cognome");
+recoverValue(localStorage, "nome");
+recoverValue(sessionStorage, "cognome");
