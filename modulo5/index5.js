@@ -170,3 +170,19 @@ buttonCreateList2.addEventListener("click", function () {
     elemLi.innerText = "Nuovo punto dell'elenco inserito";
     elemUl.appendChild(elemLi);
 })
+
+
+//SUBMIT
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("formTag");
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const nome = document.getElementById("nome").value.trim();
+        const cognome = document.getElementById("cognome").value.trim();
+        if (nome === "" || cognome === "") {
+            alert("Inserisci i dati mancanti");
+        } else {
+            console.log(`Nome: ${nome} cognome: ${cognome}`);
+        }
+    })
+})
