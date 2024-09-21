@@ -124,8 +124,17 @@ const titleH6 = document.querySelector('h6');
 console.log(`Il mio elemento h6: ${titleH6}`);
 
 
-//MODIIFCA IL TESTO DI UN PARAGRAFO
+//MODIFICA IL TESTO DI UN PARAGRAFO
 document.getElementById('testoModificato').addEventListener("click", function () {
     const p = document.getElementById("text");
     p.innerText = "Nuovo testo del paragrafo";
 });
+
+
+//CAMBIA LO STILE
+const textChange = document.getElementById('change');
+const buttonChangeStyle = document.getElementById('changeStyle');
+buttonChangeStyle.addEventListener("click", function () {
+    textChange.style.background = 'pink';
+    textChange.style.fontSize = '30px';
+})
