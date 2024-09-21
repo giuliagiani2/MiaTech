@@ -147,3 +147,14 @@ buttonChangeStyle.addEventListener("click", function () {
         alert("Premuto pulsante interno al paragrafo.");
     })
 })
+
+
+//CREA UNA LISTA
+document.getElementById("createList").addEventListener("click", function () {
+    const elemUl = document.createElement("ul");
+    const elemLi = document.createElement("li");
+    elemLi.innerText = "nuovo elemento inserito nell'elenco";
+    elemUl.appendChild(elemLi);
+    const divListContainer = document.getElementById("listContainer");
+    divListContainer.appendChild(elemUl);
+})
