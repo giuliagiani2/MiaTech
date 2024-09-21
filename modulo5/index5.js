@@ -158,3 +158,15 @@ document.getElementById("createList").addEventListener("click", function () {
     const divListContainer = document.getElementById("listContainer");
     divListContainer.appendChild(elemUl);
 })
+
+
+//CREA I LIST ITEMS
+const listContainer = document.getElementById("listContainer2");
+const elemUl = document.createElement("ul");
+listContainer.appendChild(elemUl);
+const buttonCreateList2 = document.getElementById("createList2");
+buttonCreateList2.addEventListener("click", function () {
+    const elemLi = document.createElement("li");
+    elemLi.innerText = "Nuovo punto dell'elenco inserito";
+    elemUl.appendChild(elemLi);
+})
