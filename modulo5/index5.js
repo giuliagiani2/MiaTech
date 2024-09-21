@@ -138,3 +138,12 @@ buttonChangeStyle.addEventListener("click", function () {
     textChange.style.background = 'pink';
     textChange.style.fontSize = '30px';
 })
+
+
+//MODIFICA L'HTML
+buttonChangeStyle.addEventListener("click", function () {
+    textChange.innerHTML = `Paragrafo di testo <button id="innerButton">Click me</button>`;
+    document.getElementById("innerButton").addEventListener("click", function () {
+        alert("Premuto pulsante interno al paragrafo.");
+    })
+})
