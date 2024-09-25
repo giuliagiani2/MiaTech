@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!--MODIFICA IL FILE DI CONFIGURAZIONE-->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#f59e0b",
+                    },
+                },
+            },
+        }
+    </script>
 </head>
 
 <body>
@@ -31,6 +43,10 @@
         <p>Paragrafo 1 del contenitore</p>
         <p>Paragrafo 2 del contenitore</p>
     </div>
+
+
+    <!--MODIFICA IL FILE DI CONFIGURAZIONE-->
+    <p class="text-right text-primary">Testo</p>
 </body>
 
 </html>
