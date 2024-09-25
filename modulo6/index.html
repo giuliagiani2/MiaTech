@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!--MODIFICA IL FILE DI CONFIGURAZIONE-->
+    <!--MODIFICA IL FILE DI CONFIGURAZIONE, ESTENSIONE DELLE DIMENSIONI-->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         primary: "#f59e0b",
+                    },
+                    spacing: {
+                        margin: 1,
+                        padding: 5
                     },
                 },
             },
@@ -47,6 +51,12 @@
 
     <!--MODIFICA IL FILE DI CONFIGURAZIONE-->
     <p class="text-right text-primary">Testo</p>
+
+
+    <!--ESTENSIONE DELLE DIMENSIONI-->
+    <h6 class="m-margin p-padding">
+        Titoletto piccolo
+    </h6>
 </body>
 
 </html>
