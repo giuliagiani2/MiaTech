@@ -58,10 +58,22 @@
     </div>
 
 
-    <!--STILE DARK MODE-->
-    <div class="dark:bg-blue-700 dark:text-white p-3">
+    <!--STILE DARK MODE, TOGGLE DARK MODE-->
+    <div class="dark:bg-gray-700 dark:text-white p-3">
         Elemento che avrà sfondo blu e testo bianco.
     </div>
+    <div class="p-3">
+        <button id="darkModeToggle" class="border-2 border-black-500">Dark MODE
+            <span id="darkModeStatus">Inactive</span>
+        </button>
+    </div>
+    <script>
+        const toggleDarkMode = () => {
+            document.body.classList.toggle("dark");
+            document.querySelector("#darkModeStatus").innerHTML = document.body.classList.contains("black") ? "Active" : "Inactive";
+        }
+        document.querySelector("#darkModeToggle").addEventListener("click", toggleDarkMode);
+    </script>
 </body>
 
 </html>
