@@ -21,6 +21,18 @@
             }
         }
     </script>
+
+    <!--COMPONENTI CUSTOM-->
+    <style type="text/tailwindcss">
+        @layer components{
+            .button{
+                border: 2px dotted darkcyan;
+                padding: 10px;
+                margin: 10px;
+                border-radius: 4px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -53,6 +65,12 @@
         <button type="submit"
             class="bg-green-400 text-white font-semibold focus:outline-none disables:opacity-50">Invia</button>
     </form>
+
+
+    <!--COMPONENTI CUSTOM-->
+    <div class="p-4">
+        <button class="button">Clicca qui</button>
+    </div>
 </body>
 
 </html>
