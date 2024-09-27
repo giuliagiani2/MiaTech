@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: "#4CC417",
+                        strawberry: "fc5a8d",
+                        lime: "#00FF00",
+                        lemon: "#FFF700"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <!--STILI HOVER-->
+    <div class="p-3">
+        <button class="bg-yellow-400 hover:bg-lemon">Bottone 1</button>
+    </div>
+    <div class="p-3">
+        <button class="bg-red-400 hover:bg-strawberry">Bottone 2</button>
+    </div>
+    <div class="p-3">
+        <button class="bg-green-400 hover:bg-lime">Bottone 3</button>
+    </div>
+    <div class="p-3">
+        <button class="bg-green-400 hover:bg-apple">Bottone 4</button>
+    </div>
+
+</body>
+
+</html>
