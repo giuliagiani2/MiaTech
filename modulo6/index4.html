@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#dc2626",
+                        secondary: "#84cc16",
+                        tertiary: "#2563eb",
+                        beach: "#fef08a",
+                        cake: "#f59e0b"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!--CONTENITORE-->
+    <div class="flex flex-row">
+        <div class="bg-cake p-4 m-4">
+            <h1>Colonna 1</h1>
+            <p>Contenuto colonna 1</p>
+        </div>
+        <div class="bg-primary p-4 m-4">
+            <h1>Colonna 2</h1>
+            <p>Contenuto colonna 2</p>
+        </div>
+        <div class="bg-secondary p-4 m-4">
+            <h1>Colonna 3</h1>
+            <p>Contenuto colonna 3</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
