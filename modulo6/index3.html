@@ -22,7 +22,7 @@
         }
     </script>
 
-    <!--COMPONENTI CUSTOM-->
+    <!--COMPONENTI CUSTOM, STILI RIUTILIZZABILI-->
     <style type="text/tailwindcss">
         @layer components{
             .button{
@@ -30,6 +30,15 @@
                 padding: 10px;
                 margin: 10px;
                 border-radius: 4px;
+            }
+            .card{
+                background-color: aquamarine;
+                border-radius: 5px;
+                padding: 2px;
+                box-sizing: border-box;
+            }
+            .button-2{
+                @apply button text-apple;
             }
         }
     </style>
@@ -71,6 +80,17 @@
     <div class="p-4">
         <button class="button">Clicca qui</button>
     </div>
+
+
+    <!--STILI RIUTILIZZABILI-->
+    <div class="p-4">
+        <img src="" alt="immagine">
+        <div class="card">
+            <h3>Titolo delle card</h3>
+            <p>Paragrafo della card</p>
+        </div>
+    </div>
+    <button type="button" class="button-2">Bottone</button>
 </body>
 
 </html>
