@@ -5,9 +5,17 @@ const UncontrolledInput = () => {
     //PARTE 2
     const inputRef = useRef(null);
 
-    //PARTE 1, PARTE 2
+    //PARTE 3
+    const handleSubmit = () => {
+        alert(`Valore inserito nell'unput: ${inputRef.current.value}`);
+    }
+
+    //PARTE 1, PARTE 2, PARTE 3
     return (
-        <input type="text" ref={inputRef} />
+        <form onSubmit={handleSubmit}>
+            <input type="text" ref={inputRef} />
+            <button type="submit">Invia</button>
+        </form>
     )
 }
 
