@@ -19,11 +19,17 @@ const Counter = () => {
         })
     }
 
+    //RESETTA CONTATORE
+    const handleClickReset = () => {
+        setCounter(0);
+    }
+
     return (
         <div>
             <p>Counter: {counter}</p>
             <button onClick={handleClickIncrement}>Incrementa</button>
             <button onClick={handleClickDecrement}>Decrementa</button>
+            <button onClick={handleClickReset}>Reset</button>
         </div>
     )
 }
