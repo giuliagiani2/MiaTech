@@ -1,10 +1,13 @@
-import React from "react";
+//USARE UN REF PER ACCEDERE AL VALROE DELL'INPUT
+import React, { useRef } from "react";
 
 const UncontrolledInput = () => {
+    //PARTE 2
+    const inputRef = useRef(null);
 
-    //USARE UN REF PER ACCEDERE AL VALROE DELL'INPUT
+    //PARTE 1, PARTE 2
     return (
-        <input type="text" />
+        <input type="text" ref={inputRef} />
     )
 }
 
