@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 //CREATO UN CONTATORE SEMPLICE
 const Counter = () => {
@@ -23,6 +23,11 @@ const Counter = () => {
     const handleClickReset = () => {
         setCounter(0);
     }
+
+    //SINCRONIZZA IL TITOLO CON IL CONTATORE
+    useEffect(() => {
+        document.title = `Counter ${counter}`;
+    }, [counter]);
 
     return (
         <div>
