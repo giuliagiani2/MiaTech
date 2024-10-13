@@ -1,13 +1,13 @@
 import React from "react";
 
-const ItemList = () => {
+const ItemList = ({ items }) => {
     //RENDERE UNA LISTA DI ELEMENTI - PARTE 1
-    const data = ["ciao", "come", "stai"];
+
     return (
         <>
             <ul>
                 {
-                    data.map((item, index) => {
+                    items.map((item, index) => {
                         return (
                             <li key={`item-${index}`}>{item}</li>
                         )
