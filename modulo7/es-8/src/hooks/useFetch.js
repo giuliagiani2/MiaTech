@@ -7,7 +7,7 @@ const DEFAULT_OPTIONS = {
     data: {}
 };
 
-export const usefetch = (url, options = DEFAULT_OPTIONS) => {
+export const useFetch = (url, options = DEFAULT_OPTIONS) => {
     const [data, setData] = useState(null);
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(true);
