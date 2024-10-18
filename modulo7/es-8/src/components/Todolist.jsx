@@ -5,12 +5,9 @@ import { useFetch } from "../hooks/useFetch";
 import { useFilteredTodos } from "../hooks/useFilteredTodos";
 import { useTodoContext } from "../provider/TodoProvider";
 
-const API_URL = "https://jsonplaceholder.typicode.com/todos";
-
 const TodoList = () => {
     const [searchTerm, setSearchTerm] = useState("");
-    const { data: todos, error, loading } = useFetch(API_URL);
-    const { _todos, updateTodos } = useTodoContext();
+    const { todos, loading, error } = useTodoContext();
 
     //GESTISCI IL FOCUS DELL'INPUT DI RICERCA CON USEREF
     const searchInputRef = useRef(null);
@@ -22,21 +19,14 @@ const TodoList = () => {
 
     //MEMORIZZA LA LISTA DEI TO-DO FILTRATI CON USEMEMO
     const filteredTodos = useMemo(() => {
-        const todosToFilter = Array.isArray(_todos) && _todos.length > 0 ? _todos : Array.isArray(todos) ? todos : [];
-        return todosToFilter.filter(todo => todo.title.toLowerCase().includes(searchTerm.toLowerCase()));
-    }, [todos, _todos, searchTerm]);
+        return todos.filter(todo => todo.title.toLowerCase().includes(searchTerm.toLowerCase()));
+    }, [todos, searchTerm]);
 
     useEffect(() => {
         if (searchInputRef.current) {
             searchInputRef.current.focus();
         }
     }, []);
-
-    useEffect(() => {
-        if (todos) {
-            updateTodos(todos);
-        }
-    }, [todos, updateTodos]);
 
     if (loading) return <p>Loading della pagina</p>
     if (error) return <p>Errore: {error}</p>
