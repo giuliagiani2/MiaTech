@@ -1,10 +1,13 @@
 import TodoList from "./components/Todolist";
+import { TodoProvider } from "./provider/TodoProvider";
 
 const App = () => {
 
   return (
     <>
-      <TodoList />
+      <TodoProvider>
+        <TodoList />
+      </TodoProvider>
     </>
   )
 }
