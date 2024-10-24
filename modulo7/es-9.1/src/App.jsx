@@ -2,8 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Layout from "./components/Layout";
-import TodoList from "./components/TodoList"; // Assicurati di importare il componente
-import { TodoProvider } from './context/TodoContext'; // Assicurati di importare il provider
+import { TodoProvider } from './context/TodoContext';
 
 const App = () => {
 

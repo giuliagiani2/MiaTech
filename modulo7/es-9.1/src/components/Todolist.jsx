@@ -5,10 +5,10 @@ import { TodoContext } from '../context/TodoContext';
 const TodoList = () => {
     const { todos, setTodos } = useContext(TodoContext);
     const [searchTerm, setSearchTerm] = useState('');
-    
+
     const { data, loading, error } = useFetch('https://jsonplaceholder.typicode.com/todos');
 
-    const inputRef = useRef(null); // Inizializza il ref a null.
+    const inputRef = useRef(null);
 
     const handleSearchChange = useCallback((e) => {
         setSearchTerm(e.target.value);
@@ -17,10 +17,10 @@ const TodoList = () => {
     const filteredTodos = useMemo(() => {
         return todos.filter(todo => todo.title.toLowerCase().includes(searchTerm.toLowerCase()));
     }, [todos, searchTerm]);
-    
-    // On mount, focus the input
+
+
     useEffect(() => {
-        if (inputRef.current) { // Verifica se il ref è definito
+        if (inputRef.current) {
             inputRef.current.focus();
         }
     }, []);
@@ -38,7 +38,7 @@ const TodoList = () => {
         <>
             <input
                 type="text"
-                ref={inputRef} // Assegna il ref all'input
+                ref={inputRef}
                 value={searchTerm}
                 onChange={handleSearchChange}
                 placeholder="Search todos..."
