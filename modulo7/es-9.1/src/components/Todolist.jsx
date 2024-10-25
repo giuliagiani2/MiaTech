@@ -1,6 +1,7 @@
 import { useState, useMemo, useRef, useCallback, useContext, useEffect } from 'react';
 import useFetch from '../hooks/useFetch';
 import { TodoContext } from '../context/TodoContext';
+import { Link } from 'react-router-dom';
 
 const TodoList = () => {
     const { todos, setTodos } = useContext(TodoContext);
@@ -45,7 +46,9 @@ const TodoList = () => {
             />
             <ul>
                 {filteredTodos.map(todo => (
-                    <li key={todo.id}>{todo.title}</li>
+                    <li key={todo.id}>
+                        <Link to={`/todo/${todo.id}`}>{todo.title}</Link>
+                    </li>
                 ))}
             </ul>
         </>
