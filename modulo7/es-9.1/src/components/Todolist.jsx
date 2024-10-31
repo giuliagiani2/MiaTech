@@ -1,38 +1,38 @@
-import { useState, useMemo, useRef, useCallback, useContext, useEffect } from 'react';
+import { useMemo, useRef, useEffect } from 'react';
 import useFetch from '../hooks/useFetch';
-import { TodoContext } from '../context/TodoContext';
 import { Link, useSearchParams } from 'react-router-dom';
+import { useSelector, useDispatch } from "react-redux";
+import { setTodo } from '../store/todoSlice';
 
 const TodoList = () => {
-    const { todos, setTodos } = useContext(TodoContext);
-    const [searchParams, setSearchParams] = useState();
-
+    const dispatch = useDispatch();
+    const todos = useSelector((state) => state.todo);
+    const [searchParams, setSearchParams] = useSearchParams();
     const { data, loading, error } = useFetch('https://jsonplaceholder.typicode.com/todos');
 
     const inputRef = useRef(null);
 
     const searchTerm = searchParams.get("search") || "";
 
-    const handleSearchChange = useCallback((e) => {
-        setSearchParams(e.target.value);
-    }, []);
+    const handleSearchChange = (e) => {
+        setSearchParams({ search: e.target.value });
+    };
 
     const filteredTodos = useMemo(() => {
         return todos.filter(todo => todo.title.toLowerCase().includes(searchTerm.toLowerCase()));
     }, [todos, searchTerm]);
 
+    useEffect(() => {
+        if (data) {
+            dispatch(setTodo(data));
+        }
+    }, [data, dispatch]);
 
     useEffect(() => {
         if (inputRef.current) {
             inputRef.current.focus();
         }
     }, []);
-
-    useEffect(() => {
-        if (data) {
-            setTodos(data);
-        }
-    }, [data, setTodos]);
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>;
