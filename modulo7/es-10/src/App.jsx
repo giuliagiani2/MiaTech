@@ -1,11 +1,11 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Layout from "./components/Layout";
-import { TodoProvider } from './context/TodoContext';
 import TodoDetail from "./pages/TodoDetail";
 import store from "./store";
 import { Provider as ReduxProvider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
 

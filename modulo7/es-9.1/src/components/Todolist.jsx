@@ -2,12 +2,13 @@ import { useMemo, useRef, useEffect } from 'react';
 import useFetch from '../hooks/useFetch';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
-import { setTodo } from '../store/todoSlice';
+import { setTodo, toggleTodo } from "../store/todoSlice";
 
 const TodoList = () => {
     const dispatch = useDispatch();
     const todos = useSelector((state) => state.todo);
     const [searchParams, setSearchParams] = useSearchParams();
+
     const { data, loading, error } = useFetch('https://jsonplaceholder.typicode.com/todos');
 
     const inputRef = useRef(null);
@@ -34,6 +35,10 @@ const TodoList = () => {
         }
     }, []);
 
+    const handleToggleTodo = (id) => {
+        dispatch(toggleTodo(id));
+    }
+
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>;
 
@@ -49,7 +54,14 @@ const TodoList = () => {
             <ul>
                 {filteredTodos.map(todo => (
                     <li key={todo.id}>
-                        <Link to={`/todo/${todo.id}`}>{todo.title}</Link>
+                        <Link to={`/todo/${todo.id}`}>
+                            <span style={{ textDecoration: todo.completed ? "line-through" : "none" }}>
+                                {todo.title}
+                            </span>
+                        </Link>
+                        <button onClick={() => handleToggleTodo(todo.id)}>
+                            {todo.completed ? "Incomplete" : "Complete"}
+                        </button>
                     </li>
                 ))}
             </ul>
