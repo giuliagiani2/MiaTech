@@ -1,12 +1,14 @@
 //PASSA DATI TRAMITE URL CON USEPARAMS
 
 import { useContext } from "react";
-import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { TodoContext } from "../context/TodoContext";
 
 const TodoDetail = () => {
     const { id } = useParams();
-    const todo=useSelector(state=>state.todo.find(todo=>todo.id===parseInt(id)));
+    const { todos } = useContext(TodoContext);
+
+    const todo = todos.find(todo => todo.id === parseInt(id));
 
     if (!todo) return <p>To-do non trovato</p>
 
