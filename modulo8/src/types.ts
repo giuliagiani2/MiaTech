@@ -3,3 +3,9 @@ interface Todo {
     title: string,
     completed: boolean
 }
+
+interface User {
+    id: number,
+    name: string,
+    email?: string
+}
