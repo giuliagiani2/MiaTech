@@ -50,5 +50,23 @@ const userAllTodos = getUserTodos(42);
 //Gestione degli Errori con Never
 const error = (message: string): never => {
     throw new Error(message);
+}
 
+
+//Gestione dei Tipi Dinamici con Unknown
+const parseInput = (input: unknown) => {
+    if (typeof input === "string") {
+        return input;
+    } else if (typeof input === "number") {
+        return input.toString();
+    } else {
+        error("Input non valido");
+    }
+}
+parseInput("Hello world");
+parseInput(4);
+try {
+    parseInput(true);
+} catch (error) {
+    console.error(error);
 }
