@@ -22,7 +22,7 @@ console.log(todos);
 
 
 //Associare Todo con Utenti
-const assignTodoToUser = (todoId: number, userId: number) => {
+const assignTodoToUser = (todoId: number, userId: number): Todo => {
     const todo = todos.find(t => t.id === todoId);
     if (todo) {
         todo.userId = userId;
@@ -38,3 +38,10 @@ const assignedTodo2 = assignTodoToUser(3, 30);
 console.log(assignedTodo);
 console.log(assignedTodo1);
 console.log(assignedTodo2);
+
+
+//Creare una Funzione per Ottenere i Todo di un Utente
+const getUserTodos = (userId: number): Todo => {
+    return todos.filter(todo => todo.userId === userId);
+}
+const userAllTodos = getUserTodos(42);
