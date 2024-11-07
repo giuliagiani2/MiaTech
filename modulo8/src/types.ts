@@ -1,7 +1,8 @@
 interface Todo {
     id: number,
     title: string,
-    completed: boolean
+    completed: boolean,
+    userId?: number
 }
 
 interface User {
