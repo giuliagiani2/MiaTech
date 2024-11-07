@@ -2,7 +2,8 @@ interface Todo {
     id: number,
     title: string,
     completed: boolean,
-    userId?: number
+    userId?: number,
+    metadata?: any
 }
 
 interface User {
