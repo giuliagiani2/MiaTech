@@ -45,3 +45,10 @@ const getUserTodos = (userId: number): Todo => {
     return todos.filter(todo => todo.userId === userId);
 }
 const userAllTodos = getUserTodos(42);
+
+
+//Gestione degli Errori con Never
+const error = (message: string): never => {
+    throw new Error(message);
+
+}
