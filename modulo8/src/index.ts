@@ -112,3 +112,14 @@ const user1: User = {
     ]
 }
 user1.todos[0].completed = true;
+
+
+//Utilizzare Tuple
+const getTodoSummary = (todo: Todo): [string, boolean] => {
+    return [todo.title, todo.completed];
+}
+const todo1: Todo = { title: "Ciao come stai", completed: false };
+const todo2: Todo = { title: "Oggi è soleggiato", completed: false };
+
+console.log(getTodoSummary(todo1));
+console.log(getTodoSummary(todo2));
