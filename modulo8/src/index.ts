@@ -1,4 +1,4 @@
-import { Todo, User } from "./types";
+import { Todo, User, Project } from "./types";
 
 const user: User[] = [];
 
@@ -123,3 +123,21 @@ const todo2: Todo = { title: "Oggi è soleggiato", completed: false };
 
 console.log(getTodoSummary(todo1));
 console.log(getTodoSummary(todo2));
+
+
+//Finalizzare il Progetto
+const createProject = (id: number, name: string, users: User[], todos: Todo[]) => {
+    return {
+        id: id,
+        name: name,
+        users: users,
+        todos: todos
+    }
+}
+//esempio dei dati per User e Todo (Project)
+const user2: User = { id: 3, name: "Alice Verdi", email: "verdi.alice@gmail.com" };
+const user3: User = { id: 4, name: "Nome Cognome", email: "cognome.nome@gmail.com" };
+const todo3: Todo = { id: 3, title: "Fare la spesa", completed: true };
+const todo4: Todo = { id: 4, title: "Innaffiare le piante", completed: false };
+const project = createProject(1, "Primo progetto", [user2, user3], [todo3, todo4]);
+console.log(project);

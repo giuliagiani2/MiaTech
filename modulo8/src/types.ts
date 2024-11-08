@@ -16,3 +16,10 @@ interface User {
 interface TodoWithMetadata extends Todo {
     metadata: any
 }
+
+interface Project {
+    id: number,
+    name: string,
+    users: User[],
+    todos: Todo[]
+}
