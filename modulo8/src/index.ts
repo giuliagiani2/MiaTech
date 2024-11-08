@@ -3,7 +3,7 @@ import { Todo } from "./types";
 const todos: Todo[] = [];
 let nextId: number = 1;
 
-const addTodo = (title: string, metadata?: any): Todo => {
+const addTodo = (title: string, metadata?: string | object): Todo => {
     const newTodo: Todo = {
         id: nextId,
         title: title,
