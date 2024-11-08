@@ -15,11 +15,27 @@ const addTodo = (title: string, metadata?: string | object): Todo => {
     return newTodo;
 }
 
-//esempio
+
+//Utilizzare Tipi Utility
+const updateTodo = (todoId: number, updateProperties: Partial<Todo>): Todo | null => {
+    const todo = todos.find(t => t.id === todoId);
+    if (todo) {
+        Object.assign(todo, updateProperties);
+        return todo;
+    }
+    return null;
+}
+
+
+//esempio con addTodo
 addTodo("Ciao come stai", { priority: "high" });
 addTodo("Oggi è soleggiato");
 
 console.log(todos);
+
+//esempio con updateTodo
+updateTodo(1, { title: "Oggi è nuvoloso" });
+updateTodo(2, { completed: true, metadata: "lower" })
 
 
 //Associare Todo con Utenti
