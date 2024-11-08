@@ -1,4 +1,6 @@
-import { Todo } from "./types";
+import { Todo, User } from "./types";
+
+const user: User[] = [];
 
 const todos: Todo[] = [];
 let nextId: number = 1;
@@ -90,3 +92,23 @@ try {
 } catch (error) {
     console.error(error);
 }
+
+//Utilizzare Array Readonly
+const user1: User = {
+    id: 1,
+    name: "Mario Rossi",
+    email: "rossi.mario@gmail.com",
+    todos: [
+        {
+            id: 1,
+            title: "Ciao come stai",
+            completes: false
+        },
+        {
+            id: 2,
+            title: "Oggi è soleggiato",
+            completes: false
+        }
+    ]
+}
+user1.todos[0].completed = true;
