@@ -11,3 +11,7 @@ interface User {
     name: string,
     email?: string
 }
+
+interface TodoWithMetadata extends Todo {
+    metadata: any
+}
