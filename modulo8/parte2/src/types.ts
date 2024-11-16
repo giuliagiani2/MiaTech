@@ -30,5 +30,5 @@ interface Project {
 enum TodoStatus {
     Pending,
     InProgress,
-    COmpleted
+    Completed
 }

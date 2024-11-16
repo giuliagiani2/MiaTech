@@ -1,4 +1,4 @@
-import { Todo, User, Project } from "./types";
+import { Todo, User, Project, TodoStatus } from "./types";
 
 const user: User[] = [];
 
@@ -10,7 +10,8 @@ const addTodo = (title: string, metadata?: string | object): Todo => {
         id: nextId,
         title: title,
         completed: false,
-        metadata: metadata
+        metadata: metadata,
+        status: TodoStatus.Pending
     }
     todos.push(newTodo);
     nextId++;
