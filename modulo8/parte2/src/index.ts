@@ -142,3 +142,24 @@ const todo3: Todo = { id: 3, title: "Fare la spesa", completed: true };
 const todo4: Todo = { id: 4, title: "Innaffiare le piante", completed: false };
 const project = createProject(1, "Primo progetto", [user2, user3], [todo3, todo4]);
 console.log(project);
+
+
+//PARTE 2
+//Funzione per Aggiornare lo Stato del Todo
+const updateTodoStatus = (todoId: number, status: TodoStatus): Todo => {
+    const todo = todos.find(t => t.id === todoId);
+    if (todo) {
+        todo.status = status;
+        return todo;
+    }
+    return null;
+}
+
+const updateTodo1 = updateTodoStatus(1, TodoStatus.InProgress);
+console.log(updateTodo1);
+
+const updateTodo2 = updateTodoStatus(2, TodoStatus.Completed);
+console.log(updateTodo2);
+
+const updateTodoNotFound = updateTodoStatus(1000, TodoStatus.Completed);
+console.log(updateTodoNotFound);

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const types_1 = require("./types");
 const user = [];
 const todos = [];
 let nextId = 1;
@@ -8,7 +9,8 @@ const addTodo = (title, metadata) => {
         id: nextId,
         title: title,
         completed: false,
-        metadata: metadata
+        metadata: metadata,
+        status: types_1.TodoStatus.Pending
     };
     todos.push(newTodo);
     nextId++;
@@ -119,3 +121,19 @@ const todo3 = { id: 3, title: "Fare la spesa", completed: true };
 const todo4 = { id: 4, title: "Innaffiare le piante", completed: false };
 const project = createProject(1, "Primo progetto", [user2, user3], [todo3, todo4]);
 console.log(project);
+//PARTE 2
+//Funzione per Aggiornare lo Stato del Todo
+const updateTodoStatus = (todoId, status) => {
+    const todo = todos.find(t => t.id === todoId);
+    if (todo) {
+        todo.status = status;
+        return todo;
+    }
+    return null;
+};
+const updateTodo1 = updateTodoStatus(1, types_1.TodoStatus.InProgress);
+console.log(updateTodo1);
+const updateTodo2 = updateTodoStatus(2, types_1.TodoStatus.Completed);
+console.log(updateTodo2);
+const updateTodoNotFound = updateTodoStatus(1000, types_1.TodoStatus.Completed);
+console.log(updateTodoNotFound);
