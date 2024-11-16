@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const types_1 = require("./types");
+const User_1 = require("./User");
 const user = [];
 const todos = [];
 let nextId = 1;
@@ -79,7 +80,7 @@ catch (error) {
     console.error(error);
 }
 //Utilizzare Array Readonly
-const user1 = {
+/*const user1: User = {
     id: 1,
     name: "Mario Rossi",
     email: "rossi.mario@gmail.com",
@@ -95,16 +96,17 @@ const user1 = {
             completes: false
         }
     ]
-};
-user1.todos[0].completed = true;
+}
+user1.todos[0].completed = true;*/
 //Utilizzare Tuple
 const getTodoSummary = (todo) => {
     return [todo.title, todo.completed];
 };
-const todo1 = { title: "Ciao come stai", completed: false };
-const todo2 = { title: "Oggi è soleggiato", completed: false };
+/*const todo1: Todo = { title: "Ciao come stai", completed: false };
+const todo2: Todo = { title: "Oggi è soleggiato", completed: false };
+
 console.log(getTodoSummary(todo1));
-console.log(getTodoSummary(todo2));
+console.log(getTodoSummary(todo2));*/
 //Finalizzare il Progetto
 const createProject = (id, name, users, todos) => {
     return {
@@ -115,12 +117,12 @@ const createProject = (id, name, users, todos) => {
     };
 };
 //esempio dei dati per User e Todo (Project)
-const user2 = { id: 3, name: "Alice Verdi", email: "verdi.alice@gmail.com" };
-const user3 = { id: 4, name: "Nome Cognome", email: "cognome.nome@gmail.com" };
-const todo3 = { id: 3, title: "Fare la spesa", completed: true };
-const todo4 = { id: 4, title: "Innaffiare le piante", completed: false };
+/*const user2: User = { id: 3, name: "Alice Verdi", email: "verdi.alice@gmail.com" };
+const user3: User = { id: 4, name: "Nome Cognome", email: "cognome.nome@gmail.com" };
+const todo3: Todo = { id: 3, title: "Fare la spesa", completed: true };
+const todo4: Todo = { id: 4, title: "Innaffiare le piante", completed: false };
 const project = createProject(1, "Primo progetto", [user2, user3], [todo3, todo4]);
-console.log(project);
+console.log(project);*/
 //PARTE 2
 //Funzione per Aggiornare lo Stato del Todo
 const updateTodoStatus = (todoId, status) => {
@@ -137,3 +139,16 @@ const updateTodo2 = updateTodoStatus(2, types_1.TodoStatus.Completed);
 console.log(updateTodo2);
 const updateTodoNotFound = updateTodoStatus(1000, types_1.TodoStatus.Completed);
 console.log(updateTodoNotFound);
+//Utilizzare la Classe User
+const user1 = new User_1.Userr(1, 'MArio Rossi', 'rossi.mario@gmail.com');
+const user2 = new User_1.Userr(2, 'Alice Verdi', 'verdi.alice@gmail.com');
+const todo1 = new types_1.Todo(1, 'fare la spesa', false);
+const todo2 = new types_1.Todo(2, 'annaffiare le piante', true);
+const todo3 = new types_1.Todo(3, 'leggere un libro', true);
+user1.addTodo(todo1);
+user1.addTodo(todo2);
+user2.addTodo(todo3);
+console.log(user1);
+console.log(user2);
+console.log(`${user1.name} ha i seguenti todo:`, user1.todos);
+console.log(`${user2.name} ha i seguenti todo:`, user2.todos);

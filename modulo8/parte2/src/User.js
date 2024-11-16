@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-class User {
+exports.Userr = void 0;
+class Userr {
     constructor(id, name, email) {
         this.id = id;
         this.name = name;
@@ -11,3 +12,4 @@ class User {
         this.todos.push(todo);
     }
 }
+exports.Userr = Userr;
