@@ -25,3 +25,11 @@ const updateTodo1 = updatePartialTodo(todos, 2, { completed: false });
 console.log(updateTodo1);
 const updateTodo2 = updatePartialTodo(todos, 3, { text: "Andare in palestra", completed: false });
 console.log(updateTodo2);
+const convertArraytoRecord = (todos) => {
+    return todos.reduce((record, todo) => {
+        record[todo.id] = todo;
+        return record;
+    }, {});
+};
+const todoRecord = convertArraytoRecord(todos);
+console.log(todoRecord);

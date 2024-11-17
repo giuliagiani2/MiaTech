@@ -40,3 +40,16 @@ console.log(updateTodo1);
 
 const updateTodo2 = updatePartialTodo(todos, 3, { text: "Andare in palestra", completed: false });
 console.log(updateTodo2);
+
+
+//Utilizzare Record
+type TodoRecord = Record<number, Todo>;
+const convertArraytoRecord = (todos: Todo[]): TodoRecord => {
+    return todos.reduce((record, todo) => {
+        record[todo.id] = todo;
+        return record;
+    }, {} as TodoRecord);
+}
+
+const todoRecord = convertArraytoRecord(todos);
+console.log(todoRecord);
