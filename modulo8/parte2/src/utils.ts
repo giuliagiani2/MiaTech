@@ -1,3 +1,4 @@
+//Creare una Funzione Generica per il Filtro dei Todo
 import { Todo } from "./types";
 
 export const filterTodos = (todos: Todo[], filterFn: (todo: Todo) => boolean): Todo[] => {
@@ -18,3 +19,24 @@ console.log("Todo in corso: ", inProgressTodos);
 
 const todoWithPane = filterTodos(todos, (todo) => todo.title.includes("pane"));
 console.log("Todo con 'pane' nel titolo: ", todoWithPane);
+
+
+//Utilizzare Mapped Types
+type PartialTodo = {
+    [p in keyof Todo]?: Todo[p];
+}
+
+const updatePartialTodo = (todos: Todo[], todoId: number, PartialTodo: PartialTodo): Todo[] => {
+    return todos.map(todo => todo.id === todoId ? {
+        ...todo, ...PartialTodo
+    } : todo);
+}
+
+const updateTodos = updatePartialTodo(todos, 1, { text: "Comprare il latte" });
+console.log(updateTodos);
+
+const updateTodo1 = updatePartialTodo(todos, 2, { completed: false });
+console.log(updateTodo1);
+
+const updateTodo2 = updatePartialTodo(todos, 3, { text: "Andare in palestra", completed: false });
+console.log(updateTodo2);
